@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'leaflet/leaflet.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/map.css' %}" >
+    <script src="{% static 'leaflet/leaflet.js' %}"></script>
+</head>
+<body>
+    <div id="map"></div>
+</body>
+<script>
+
+    // Cấu hình bản đồ
+let config = {
+    minZoom: 7,
+    maxZoom: 18,
+  };
+  
+  // Độ phóng đại khi bản đồ được mở
+  const zoom = 18;
+  
+  // Tọa độ Trường
+  const lat = 10.796501883372228;
+  const lng = 106.66680416611385;
+  
+  // Khởi tạo bản đồ
+  const map = L.map("map", config).setView([lat, lng], zoom);
+  map.attributionControl.setPrefix(false);
+  
+  // Được dùng để tải và trình các layer trên bản đồ
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
+</script>
+</html>
