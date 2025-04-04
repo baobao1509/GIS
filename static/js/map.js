@@ -1,4 +1,3 @@
-
 // Cấu hình bản đồ
 let config = {
   minZoom: 7,
@@ -17,18 +16,9 @@ const map = L.map("map", config).setView([lat, lng], zoom);
 map.attributionControl.setPrefix(false);
 
 // Được dùng để tải và trình các layer trên bản đồ
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
-
-
-
-
-
-
-
-
-
-
-
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: '&copy; <a href="#">LT GIS </a> cơ bản',
+}).addTo(map);
 const query = `
 [out:json];
 (
@@ -53,8 +43,7 @@ fetch('https://overpass-api.de/api/interpreter', {
       // Thêm marker vào bản đồ
       L.marker([lat, lng])
         .addTo(map)
-        .bindPopup(`<b>${name}</b>`)
-        .openPopup();
+        .bindPopup(`<b>${name}</b>`);
     });
   })
   .catch(error => console.error("Lỗi khi lấy dữ liệu:", error));
