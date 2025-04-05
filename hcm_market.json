@@ -1,0 +1,3185 @@
+{
+    "version": 0.6,
+    "generator": "Overpass API 0.7.62.5 1bd436f1",
+    "osm3s": {
+      "timestamp_osm_base": "2025-04-04T02:40:41Z",
+      "timestamp_areas_base": "2025-02-06T02:17:44Z",
+      "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "elements": [
+  
+  {
+    "type": "node",
+    "id": 861748028,
+    "lat": 10.7826064,
+    "lon": 106.6283825,
+    "tags": {
+      "name": "Chợ Tân Phú",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 947763519,
+    "lat": 10.7652697,
+    "lon": 106.7028692,
+    "tags": {
+      "name": "Focomart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 1001114473,
+    "lat": 10.8064770,
+    "lon": 106.6949172,
+    "tags": {
+      "name": "Cửa Hàng Tiện Lợi Shop&Go!",
+      "operator": "Shop&Go",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 1001114491,
+    "lat": 10.8036214,
+    "lon": 106.7012353,
+    "tags": {
+      "name": "Focomart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 1597982717,
+    "lat": 10.7769187,
+    "lon": 106.6811112,
+    "tags": {
+      "name": "Maximart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 1635104039,
+    "lat": 10.8163010,
+    "lon": 106.6981233,
+    "tags": {
+      "name": "Siêu Thị Bình Hòa",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 1641500874,
+    "lat": 10.8224451,
+    "lon": 106.7071706,
+    "tags": {
+      "addr:housenumber": "440",
+      "addr:street": "Đường Nơ Trang Long",
+      "name": "Siêu Thị Mini Bình Minh",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 1657475508,
+    "lat": 10.7579255,
+    "lon": 106.6731127,
+    "tags": {
+      "name": "Siêu Thị Mela",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 1770597640,
+    "lat": 10.7737618,
+    "lon": 106.7046730,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 1773230303,
+    "lat": 10.7559528,
+    "lon": 106.6624963,
+    "tags": {
+      "addr:housenumber": "Floor 4",
+      "addr:street": "Đường Hồng Bàng",
+      "name": "Cửa Hàng Mua Sắm Citimart",
+      "name:de": "Citimart",
+      "name:vi": "Citimart Hùng Vương",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 1987339356,
+    "lat": 10.7284509,
+    "lon": 106.7183878,
+    "tags": {
+      "addr:housenumber": "101",
+      "addr:street": "Nguyễn Văn Linh",
+      "name": "COOP EXTRA",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 1997154373,
+    "lat": 10.7542055,
+    "lon": 106.6645954,
+    "tags": {
+      "name": "Siêu thị Điện máy Chợ Lớn",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 2082378066,
+    "lat": 10.8068040,
+    "lon": 106.6341470,
+    "tags": {
+      "addr:district": "Quận Tân Phú",
+      "addr:housenumber": "1/1",
+      "addr:province": "Thành phố Hồ Chí Minh",
+      "addr:street": "Trường Chinh",
+      "addr:subdistrict": "Phường Tây Hạnh",
+      "brand": "Big C",
+      "brand:wikidata": "Q858665",
+      "name": "Big C",
+      "opening_hours": "08:00-22:00",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 2141010789,
+    "lat": 10.7767779,
+    "lon": 106.7050958,
+    "tags": {
+      "addr:city": "Thành phố Hồ Chí Minh",
+      "addr:district": "Quận 1",
+      "addr:housenumber": "16-18",
+      "addr:street": "Hai Bà Trưng",
+      "email": "haibatrung@annam-gourmet.com",
+      "name": "Siêu Thị Online Annam Gourmet",
+      "phone": "08 3822 9332",
+      "shop": "supermarket",
+      "website": "http://www.annam-gourmet.com"
+    }
+  },
+  {
+    "type": "node",
+    "id": 2176765019,
+    "lat": 10.7864217,
+    "lon": 106.6755113,
+    "tags": {
+      "name": "Co.op Mart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 2341617019,
+    "lat": 10.8295261,
+    "lon": 106.6820675,
+    "tags": {
+      "addr:city": "TP.HCM",
+      "addr:district": "Q. Gò Vấp",
+      "addr:housenumber": "543/1",
+      "addr:street": "Đường Phan Văn Trị",
+      "addr:subdistrict": "Phường 7",
+      "name": "Co.opmart Phan Văn Trị",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 2458141596,
+    "lat": 10.7708442,
+    "lon": 106.6529897,
+    "tags": {
+      "name": "Siêu Thị Co.opMart - Phú Thọ",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 2593670953,
+    "lat": 10.8419863,
+    "lon": 106.6436933,
+    "tags": {
+      "name": "Co-opmart Liên Hiệp TP.HCM",
+      "operator": "Co-opmart Liên hiệp TP.HCM",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 2623036409,
+    "lat": 10.8014349,
+    "lon": 106.7468623,
+    "tags": {
+      "brand": "Big C",
+      "brand:wikidata": "Q858665",
+      "brand:wikipedia": "en:Big C",
+      "name": "Big C",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 2623151855,
+    "lat": 10.8050261,
+    "lon": 106.7362642,
+    "tags": {
+      "name": "Siêu Thị Online Annam Gourmet",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 2942880408,
+    "lat": 10.7782834,
+    "lon": 106.6653410,
+    "tags": {
+      "branch": "Miền Đông",
+      "brand": "Big C",
+      "brand:wikidata": "Q858665",
+      "name": "Big C",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 2948812333,
+    "lat": 10.7842610,
+    "lon": 106.6997300,
+    "tags": {
+      "name": "Citimart",
+      "name:vi": "Citi MK",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 3631210571,
+    "lat": 10.8119362,
+    "lon": 106.7119424,
+    "tags": {
+      "addr:city": "Phường 26",
+      "addr:district": "Bình Thạnh",
+      "addr:housenumber": "224/5 Bis",
+      "addr:postcode": "70000",
+      "addr:province": "Việt Nam",
+      "addr:street": "Quốc lộ 13",
+      "name": "Co.op Mart",
+      "opening_hours": "07:00-22:00",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 3899274115,
+    "lat": 10.7666709,
+    "lon": 106.6877461,
+    "tags": {
+      "name": "Siêu Thị C&C",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 3928108846,
+    "lat": 10.7736896,
+    "lon": 106.6975615,
+    "tags": {
+      "name": "Street Food Market",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4125804797,
+    "lat": 10.8448244,
+    "lon": 106.7802879,
+    "tags": {
+      "name": "Vincom Lê Văn Việt",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4131363694,
+    "lat": 10.7858096,
+    "lon": 106.6944333,
+    "tags": {
+      "addr:housenumber": "176-181",
+      "addr:street": "Hai Bà Trưng",
+      "name": "Trung Tâm Mua Sắm Sài Gòn Square 3",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4235350089,
+    "lat": 10.7413490,
+    "lon": 106.7038200,
+    "tags": {
+      "addr:housenumber": "353",
+      "addr:street": "Lê Văn Lương",
+      "name": "Satra Foods",
+      "opening_hours": "Mo-Su 06:00-21:00",
+      "phone": "08 377 128 74",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4236992790,
+    "lat": 10.8456180,
+    "lon": 106.7791320,
+    "tags": {
+      "internet_access": "wlan",
+      "name": "Vincom Lê Văn Việt",
+      "opening_hours": "Mo-Su 10:00-22:00",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4269770701,
+    "lat": 10.8450364,
+    "lon": 106.7801520,
+    "tags": {
+      "name": "Nhà sách Fahasha",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4405282091,
+    "lat": 10.7295702,
+    "lon": 106.7032896,
+    "tags": {
+      "name": "Trung Tâm Mua Sắm Vivo City",
+      "name:de": "Vivo City",
+      "name:vi": "Vivo city",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4505596089,
+    "lat": 10.7987967,
+    "lon": 106.6269122,
+    "tags": {
+      "addr:housenumber": "137/2",
+      "addr:postcode": "700000",
+      "addr:street": "Nguyễn Quý Anh",
+      "internet_access": "wlan",
+      "name": "Cửa Hàng 137FoodMart",
+      "name:en": "137foodmart",
+      "name:vi": "137foodmart",
+      "opening_hours": "24/7",
+      "operator": "công ty TNHH Minh Anh VN",
+      "phone": "08-62975999",
+      "shop": "supermarket",
+      "website": "https://www.137foodmart.com"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4555505691,
+    "lat": 10.8176424,
+    "lon": 106.6311526,
+    "tags": {
+      "name": "Co.op Mart Trường Chinh",
+      "name:vi": "Co.op Mart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4583470690,
+    "lat": 10.7699236,
+    "lon": 106.6925181,
+    "tags": {
+      "name:de": "Supermarkt",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4661759792,
+    "lat": 10.7615152,
+    "lon": 106.6796484,
+    "tags": {
+      "addr:street": "Đường Trần Bình Trọng",
+      "name:en": "Auchan",
+      "name:ru": "Ашан",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4682668010,
+    "lat": 10.7993153,
+    "lon": 106.7385877,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4793094521,
+    "lat": 10.7220530,
+    "lon": 106.7108475,
+    "tags": {
+      "name": "Siêu Thị K-Market",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4805126021,
+    "lat": 10.7692667,
+    "lon": 106.6933366,
+    "tags": {
+      "name": "Trung Tâm Thương Mại Sense Market",
+      "name:en": "Sense Market",
+      "name:ja": "センス・マーケット",
+      "opening_hours": "Mo-Su 10:00-22:30",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4875562328,
+    "lat": 10.7293421,
+    "lon": 106.7090932,
+    "tags": {
+      "addr:housenumber": "S12-1",
+      "addr:street": "Nguyễn Văn Linh",
+      "name": "K-Market",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4875562331,
+    "lat": 10.7368314,
+    "lon": 106.6698845,
+    "tags": {
+      "addr:housenumber": "854-856",
+      "addr:street": "Tạ Quang Bửu",
+      "name": "Cửa Hàng Zakka Nautrals - Tạ Quang Bửu",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4875562333,
+    "lat": 10.8443245,
+    "lon": 106.7410142,
+    "tags": {
+      "addr:housenumber": "4s",
+      "addr:street": "Đường số 30",
+      "name": "Zakka Thủ Đức",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4875562735,
+    "lat": 10.7270560,
+    "lon": 106.7086808,
+    "tags": {
+      "addr:housenumber": "55",
+      "addr:street": "Nguyễn Đức Cảnh",
+      "name": "Siêu Thị K-Market",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4875562738,
+    "lat": 10.7991432,
+    "lon": 106.6695155,
+    "tags": {
+      "addr:housenumber": "303",
+      "addr:street": "Nguyễn Văn Trỗi",
+      "name": "Siêu Thị Tiện Lợi Nam An",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4875563424,
+    "lat": 10.7717991,
+    "lon": 106.7041195,
+    "tags": {
+      "addr:housenumber": "61",
+      "addr:street": "Hồ Tùng Mậu",
+      "name": "Thi's Market",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4875563425,
+    "lat": 10.7993794,
+    "lon": 106.7506496,
+    "tags": {
+      "addr:housenumber": "5",
+      "addr:street": "Đường số 24",
+      "name": "Cửa Hàng My Market Imperia",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4875563426,
+    "lat": 10.8252692,
+    "lon": 106.6303666,
+    "tags": {
+      "addr:housenumber": "31-33",
+      "addr:street": "Đường Phan Huy Ích",
+      "name": "Siêu Thị Tiện Lợi Citi Mart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4882823421,
+    "lat": 10.7618357,
+    "lon": 106.6901287,
+    "tags": {
+      "addr:housenumber": "329",
+      "addr:street": "Đường Trần Hưng Ðạo",
+      "name": "Siêu Thị Tiện Lợi US",
+      "name:en": "US.Mart",
+      "phone": "02838385455",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4886878622,
+    "lat": 10.7435024,
+    "lon": 106.6955178,
+    "tags": {
+      "addr:housenumber": "1",
+      "addr:street": "Đường số 6",
+      "name": "Siêu Thị Tiện Lợi Citi Mart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4918129153,
+    "lat": 10.7968933,
+    "lon": 106.6725047,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4925670429,
+    "lat": 10.7863791,
+    "lon": 106.6646802,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4952122023,
+    "lat": 10.7313114,
+    "lon": 106.7065726,
+    "tags": {
+      "addr:housenumber": "38",
+      "addr:street": "Phạm Văn Nghị",
+      "branch": "Sky Garden",
+      "name": "K-Market",
+      "opening_hours": "06:00-00:00",
+      "phone": "+842854102611",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4952150921,
+    "lat": 10.8220612,
+    "lon": 106.7182069,
+    "tags": {
+      "addr:housenumber": "4S",
+      "addr:street": "Đường số 17",
+      "name": "Khu vui chơi, mua sắm Zakka",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4952151021,
+    "lat": 10.7168413,
+    "lon": 106.7038225,
+    "tags": {
+      "addr:housenumber": "01-03",
+      "addr:street": "Nguyễn Hữu Thọ",
+      "name": "Siêu Thị K-Market",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4960265821,
+    "lat": 10.8497120,
+    "lon": 106.7828900,
+    "tags": {
+      "addr:street": "Linh Xuân",
+      "name": "Siêu thị Co.op Xtra Linh Xuân",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5050555425,
+    "lat": 10.8031496,
+    "lon": 106.5914867,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5182537727,
+    "lat": 10.8257516,
+    "lon": 106.7199740,
+    "tags": {
+      "addr:housenumber": "Hem 20",
+      "addr:postcode": "50000",
+      "addr:street": "Đường số 19",
+      "name": "Chung cư Mỹ Kim",
+      "name:en": "My Kim Apartment",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5316003321,
+    "lat": 10.7623260,
+    "lon": 106.6927709,
+    "tags": {
+      "amenity": "restaurant",
+      "cuisine": "burger;sandwich;international;tea;seafood;coffee_shop;asian;pasta;noodles;pancake;pizza;vietnamese",
+      "internet_access": "wlan",
+      "name:en": "Ngoc hue",
+      "shop": "supermarket",
+      "tourism": "hotel"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5352258705,
+    "lat": 10.7867494,
+    "lon": 106.6795527,
+    "tags": {
+      "name": "Co.op Food",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5366253638,
+    "lat": 10.7705491,
+    "lon": 106.6695387,
+    "tags": {
+      "name": "Co.op Xtra",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5382455323,
+    "lat": 10.7642836,
+    "lon": 106.6978262,
+    "tags": {
+      "name": "Sạp Khô Hải Phựợng",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5436848729,
+    "lat": 10.7452285,
+    "lon": 106.7159571,
+    "tags": {
+      "addr:street": "Đường Lâm Văn Bền",
+      "name:en": "Coop Food",
+      "opening_hours": "Mo-Su 08:30-22:00",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5559637423,
+    "lat": 10.7722701,
+    "lon": 106.6961872,
+    "tags": {
+      "name:en": "frutas",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5648126669,
+    "lat": 10.7103398,
+    "lon": 106.5752031,
+    "tags": {
+      "addr:city": "Hồ Chí Minh",
+      "addr:district": "Bình Chánh",
+      "addr:housenumber": "15",
+      "addr:street": "Đường Võ Trần Chí",
+      "addr:subdistrict": "Tân Kiên",
+      "name": "Co.op Smile",
+      "opening_hours": "Mo-Su 06:00-22:00",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5688482069,
+    "lat": 10.8018528,
+    "lon": 106.7216474,
+    "tags": {
+      "addr:city": "Ho Chi Minh City",
+      "addr:district": "Quận Bình Thạnh",
+      "addr:street": "Hẻm 326 Ung Văn Khiêm",
+      "addr:subdistrict": "25",
+      "brand": "WinMart",
+      "brand:wikidata": "Q60245505",
+      "name": "WinMart",
+      "opening_hours": "24/7",
+      "payment:cash": "yes",
+      "payment:electronic_purses": "yes",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5743013321,
+    "lat": 10.7742791,
+    "lon": 106.6997921,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5773200656,
+    "lat": 10.7655607,
+    "lon": 106.6924438,
+    "tags": {
+      "addr:city": "Ho Chi Minh City",
+      "addr:district": "Quận 1",
+      "addr:housenumber": "120/3",
+      "addr:postcode": "700000",
+      "addr:street": "Hẻm 120 Trần Hưng Đạo",
+      "addr:subdistrict": "phường phạm ngũ lão",
+      "name": "Siêu thị phượt",
+      "opening_hours": "Mo-Su 09:00-21:00",
+      "payment:cash": "yes",
+      "shop": "supermarket",
+      "website": "http://sieuthiphuot.com/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5803798754,
+    "lat": 10.7338138,
+    "lon": 106.6744543,
+    "tags": {
+      "addr:street": "Phạm Hùng",
+      "name": "Siêu thị Satra Mart - Phạm Hùng",
+      "opening_hours": "Mo-Su 08:00-22:00",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5950622190,
+    "lat": 10.7910586,
+    "lon": 106.7108159,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6021305938,
+    "lat": 10.6947021,
+    "lon": 106.6058071,
+    "tags": {
+      "addr:city": "Ho Chi Minh City",
+      "addr:district": "Bình Chánh",
+      "addr:street": "Nguyễn Văn Linh",
+      "addr:subdistrict": "An Phú Tây",
+      "name": "Co.op Food",
+      "opening_hours": "09:00-21:00",
+      "operator": "Coop mart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6024915705,
+    "lat": 10.6941007,
+    "lon": 106.6071452,
+    "tags": {
+      "addr:city": "Ho Chi Minh City",
+      "addr:district": "Bình Chánh",
+      "addr:street": "Nguyễn Văn Linh",
+      "addr:subdistrict": "An Phú Tây",
+      "name": "Siêu Thị Hoàng Quân",
+      "opening_hours": "09:00-21:00",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6054062365,
+    "lat": 10.7671440,
+    "lon": 106.6948322,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6157860892,
+    "lat": 10.7731189,
+    "lon": 106.7007584,
+    "tags": {
+      "name": "Thực Phẩm Hữu Cơ An Toàn - Nam An",
+      "name:en": "Annam Gourmet Market (underground Takashimaya)",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6220665412,
+    "lat": 10.7948324,
+    "lon": 106.7217122,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6239863088,
+    "lat": 10.7718057,
+    "lon": 106.7714773,
+    "tags": {
+      "brand": "WinMart",
+      "brand:wikidata": "Q60245505",
+      "name": "WinMart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6284329388,
+    "lat": 10.7695785,
+    "lon": 106.6970016,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6284408685,
+    "lat": 10.7627701,
+    "lon": 106.6878402,
+    "tags": {
+      "addr:street": "Đường Trần Ðình Xu",
+      "name:en": "Circle K",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315388826,
+    "lat": 10.7663910,
+    "lon": 106.6962326,
+    "tags": {
+      "addr:street": "Đường Nguyễn Thái Học",
+      "name:en": "Circle K",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315388828,
+    "lat": 10.7658092,
+    "lon": 106.6965487,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315388859,
+    "lat": 10.7849873,
+    "lon": 106.6957305,
+    "tags": {
+      "name:en": "Familymart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315388865,
+    "lat": 10.7661781,
+    "lon": 106.6879571,
+    "tags": {
+      "name:en": "Circle K",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315388868,
+    "lat": 10.7646570,
+    "lon": 106.6875678,
+    "tags": {
+      "name:en": "Circle K",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315388877,
+    "lat": 10.7621024,
+    "lon": 106.6891263,
+    "tags": {
+      "name:en": "Mini Stop",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315390289,
+    "lat": 10.8189146,
+    "lon": 106.7008446,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315390290,
+    "lat": 10.8193566,
+    "lon": 106.6990298,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315390293,
+    "lat": 10.7921290,
+    "lon": 106.6930053,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315390422,
+    "lat": 10.8189017,
+    "lon": 106.6989915,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315390444,
+    "lat": 10.7637656,
+    "lon": 106.6903151,
+    "tags": {
+      "name:en": "C&C",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315390447,
+    "lat": 10.7644991,
+    "lon": 106.6906971,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315390485,
+    "lat": 10.7859857,
+    "lon": 106.6714069,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315390492,
+    "lat": 10.7817458,
+    "lon": 106.6703040,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315395287,
+    "lat": 10.7658114,
+    "lon": 106.6907638,
+    "tags": {
+      "addr:street": "Đường Bùi Viện",
+      "name:en": "Circle K",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315671639,
+    "lat": 10.7571210,
+    "lon": 106.6690352,
+    "tags": {
+      "name:en": "Satra Foods",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315672391,
+    "lat": 10.7634408,
+    "lon": 106.6957358,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315672407,
+    "lat": 10.7563284,
+    "lon": 106.6685596,
+    "tags": {
+      "name:en": "FamilyMart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315672408,
+    "lat": 10.7569540,
+    "lon": 106.6694273,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315672440,
+    "lat": 10.7605434,
+    "lon": 106.6815332,
+    "tags": {
+      "name:en": "FamilyMart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315672466,
+    "lat": 10.7856676,
+    "lon": 106.7023728,
+    "tags": {
+      "name:en": "Mini Stop",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315672483,
+    "lat": 10.7852278,
+    "lon": 106.6988881,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315672795,
+    "lat": 10.7686806,
+    "lon": 106.6967533,
+    "tags": {
+      "name:en": "Foodco Mart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315672806,
+    "lat": 10.7544327,
+    "lon": 106.6615921,
+    "tags": {
+      "name:en": "FamilyMart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315672811,
+    "lat": 10.7580850,
+    "lon": 106.6737931,
+    "tags": {
+      "name:en": "Circle k",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315672844,
+    "lat": 10.7824610,
+    "lon": 106.7022284,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315672862,
+    "lat": 10.7700652,
+    "lon": 106.6820527,
+    "tags": {
+      "name:en": "Circle k",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315672886,
+    "lat": 10.7680302,
+    "lon": 106.6985490,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315672928,
+    "lat": 10.7916005,
+    "lon": 106.6761072,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315672931,
+    "lat": 10.7918196,
+    "lon": 106.6770997,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315673290,
+    "lat": 10.7597325,
+    "lon": 106.6794140,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315673300,
+    "lat": 10.7686252,
+    "lon": 106.6989439,
+    "tags": {
+      "name:en": "B's Mart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315673311,
+    "lat": 10.7914374,
+    "lon": 106.6764316,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315676093,
+    "lat": 10.7732994,
+    "lon": 106.6849919,
+    "tags": {
+      "name:en": "FamilyMart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315676105,
+    "lat": 10.7916278,
+    "lon": 106.6755438,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315679800,
+    "lat": 10.7923361,
+    "lon": 106.6779316,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315683489,
+    "lat": 10.7749538,
+    "lon": 106.6642437,
+    "tags": {
+      "name:en": "MiniMart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315683513,
+    "lat": 10.7917984,
+    "lon": 106.6746883,
+    "tags": {
+      "name:en": "Vin Mart+",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315684186,
+    "lat": 10.7879360,
+    "lon": 106.6778758,
+    "tags": {
+      "name:en": "Circle k",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315685086,
+    "lat": 10.7893359,
+    "lon": 106.6782189,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315685096,
+    "lat": 10.7861978,
+    "lon": 106.6802251,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315685294,
+    "lat": 10.7656939,
+    "lon": 106.6897877,
+    "tags": {
+      "name:en": "FamilyMart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315685295,
+    "lat": 10.7706222,
+    "lon": 106.7036914,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315685985,
+    "lat": 10.7886612,
+    "lon": 106.6781504,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315686293,
+    "lat": 10.7617773,
+    "lon": 106.6960949,
+    "tags": {
+      "check_date": "2023-12-31",
+      "level": "0",
+      "name": "Familymart",
+      "name:en": "Familymart",
+      "payment:cash": "yes",
+      "payment:mastercard": "yes",
+      "payment:visa": "yes",
+      "shop": "supermarket",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315686295,
+    "lat": 10.7605084,
+    "lon": 106.6932442,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315686487,
+    "lat": 10.7864111,
+    "lon": 106.6801482,
+    "tags": {
+      "name:en": "Co.opMart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315686506,
+    "lat": 10.7699632,
+    "lon": 106.6923622,
+    "tags": {
+      "name": "Circle K",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315686804,
+    "lat": 10.7603861,
+    "lon": 106.6731486,
+    "tags": {
+      "name:en": "B's mart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315686994,
+    "lat": 10.7606320,
+    "lon": 106.6929757,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315686999,
+    "lat": 10.7675893,
+    "lon": 106.6947722,
+    "tags": {
+      "name:en": "Circle k",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315687001,
+    "lat": 10.7593289,
+    "lon": 106.6715532,
+    "tags": {
+      "name": "Siêu Thị CoopMart Hùng Vương",
+      "name:en": "Co. Op Mart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315687018,
+    "lat": 10.7982471,
+    "lon": 106.6674906,
+    "tags": {
+      "name:en": "Ministop",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315687789,
+    "lat": 10.7591603,
+    "lon": 106.6735498,
+    "tags": {
+      "name:en": "Familymart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315687799,
+    "lat": 10.7925143,
+    "lon": 106.6671054,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315687806,
+    "lat": 10.7917974,
+    "lon": 106.6902381,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315687817,
+    "lat": 10.7830575,
+    "lon": 106.6942504,
+    "tags": {
+      "name:en": "Familymart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315688299,
+    "lat": 10.8160349,
+    "lon": 106.6978509,
+    "tags": {
+      "name:en": "Vinmart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315688492,
+    "lat": 10.7916367,
+    "lon": 106.6675247,
+    "tags": {
+      "name:en": "B's mart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315688599,
+    "lat": 10.8094585,
+    "lon": 106.6950542,
+    "tags": {
+      "name:en": "Vinmart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315690599,
+    "lat": 10.8134216,
+    "lon": 106.6970650,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6315691886,
+    "lat": 10.8130798,
+    "lon": 106.6967927,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6318125514,
+    "lat": 10.7724614,
+    "lon": 106.6950674,
+    "tags": {
+      "name:en": "TD Central Hotel",
+      "shop": "supermarket",
+      "tourism": "hotel"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6318163392,
+    "lat": 10.7676268,
+    "lon": 106.7001231,
+    "tags": {
+      "name:en": "Shop & go",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6319103178,
+    "lat": 10.7645863,
+    "lon": 106.6967021,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6319103228,
+    "lat": 10.7687743,
+    "lon": 106.6992892,
+    "tags": {
+      "name:en": "Minimart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6319111397,
+    "lat": 10.7645562,
+    "lon": 106.6972327,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6319111475,
+    "lat": 10.8892077,
+    "lon": 106.5837367,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6319120185,
+    "lat": 10.9739785,
+    "lon": 106.4774263,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6319120190,
+    "lat": 11.0105020,
+    "lon": 106.4157833,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6340130547,
+    "lat": 10.7608529,
+    "lon": 106.7012374,
+    "tags": {
+      "addr:city": "Ho Chi Minh City",
+      "addr:district": "4",
+      "addr:housenumber": "Ke Q34 Hoàng Diệu, Phường 6, Quận 4, Hồ Chí Minh, Việt Nam",
+      "addr:postcode": "700000",
+      "addr:street": "Ke Q34 Hoàng Diệu, Phường 6, Quận 4, Hồ Chí Minh, Việt Nam",
+      "addr:subdistrict": "6",
+      "name": "Phụ kiện trang trí sinh nhật Ellie Party",
+      "opening_hours": "Mo-Su 07:00-22:00",
+      "operator": "https://www.facebook.com/phukientrangtriellieparty/",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6353660885,
+    "lat": 10.7723341,
+    "lon": 106.6963242,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6370262588,
+    "lat": 10.7953551,
+    "lon": 106.6621933,
+    "tags": {
+      "addr:housenumber": "8",
+      "addr:street": "Dương Vân Nga",
+      "name": "Bách Hoá Xanh",
+      "name:en": "Bach hoa XANH",
+      "opening_hours": "Mo-Su 06:30-21:30",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6373422186,
+    "lat": 10.7543965,
+    "lon": 106.7093305,
+    "tags": {
+      "name:en": "Night market",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6389068969,
+    "lat": 10.7530815,
+    "lon": 106.7037383,
+    "tags": {
+      "name": "Co.op Food",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6442018087,
+    "lat": 10.7715103,
+    "lon": 106.6929293,
+    "tags": {
+      "name:en": "Satra Foods",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6712690785,
+    "lat": 10.7515070,
+    "lon": 106.6013926,
+    "tags": {
+      "addr:street": "Đường Trần Văn Giàu",
+      "name": "Co.op Food",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6727930988,
+    "lat": 10.7321198,
+    "lon": 106.6158396,
+    "tags": {
+      "addr:housenumber": "53",
+      "addr:street": "Đường Bùi Tư Toàn",
+      "brand": "WinMart",
+      "brand:wikidata": "Q60245505",
+      "name": "WinMart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6732749444,
+    "lat": 10.7502277,
+    "lon": 106.6309150,
+    "tags": {
+      "addr:street": "Đường Kinh Dương Vương",
+      "name": "Co.op Food",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6735971883,
+    "lat": 10.7552318,
+    "lon": 106.6275944,
+    "tags": {
+      "addr:housenumber": "197",
+      "addr:street": "Bà Hom",
+      "name": "Satra Foods",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6769791510,
+    "lat": 10.7560618,
+    "lon": 106.7045993,
+    "tags": {
+      "addr:street": "Đường Vĩnh Hội",
+      "name": "Co.op Food",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6770361990,
+    "lat": 10.7581725,
+    "lon": 106.7066203,
+    "tags": {
+      "addr:housenumber": "167",
+      "addr:street": "Đường Tôn Đản",
+      "name": "Co.op Food",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6770512756,
+    "lat": 10.7499951,
+    "lon": 106.6430674,
+    "tags": {
+      "addr:street": "Đường Hậu Giang",
+      "name": "Co.op Mart Hậu Giang",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6770632001,
+    "lat": 10.7064325,
+    "lon": 106.6231231,
+    "tags": {
+      "addr:housenumber": "3437",
+      "addr:street": "Đường Phạm Thế Hiển",
+      "name": "Satra Foods",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6783472668,
+    "lat": 10.7634465,
+    "lon": 106.7080325,
+    "tags": {
+      "addr:housename": "107",
+      "addr:street": "Nguyễn Tất Thành",
+      "name": "Satra Foods",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6783852977,
+    "lat": 10.7538220,
+    "lon": 106.7055139,
+    "tags": {
+      "addr:street": "Đường Tôn Đản",
+      "name": "Satra Foods",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6786068685,
+    "lat": 10.7555361,
+    "lon": 106.6941990,
+    "tags": {
+      "addr:housenumber": "84",
+      "addr:street": "Đường Nguyễn Khoái",
+      "name": "Co.op Food - Nguyễn Khoái",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6794354485,
+    "lat": 10.7946042,
+    "lon": 106.7215659,
+    "tags": {
+      "brand": "WinMart",
+      "brand:wikidata": "Q60245505",
+      "name": "WinMart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6807433844,
+    "lat": 10.8014325,
+    "lon": 106.7479914,
+    "tags": {
+      "name": "Siêu Thị Online Annam Gourmet",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6965164241,
+    "lat": 10.7938895,
+    "lon": 106.7124906,
+    "tags": {
+      "addr:city": "Ho Chi Minh City",
+      "addr:district": "Bình Thạnh",
+      "addr:housenumber": "59",
+      "addr:street": "Ngô Tất Tố",
+      "addr:subdistrict": "Phường 21",
+      "name": "Siêu Thị Vive Gourmet Food & Wine",
+      "opening_hours": "Mo-Su 08:00-21:00",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7016156265,
+    "lat": 10.8106120,
+    "lon": 106.7031555,
+    "tags": {
+      "addr:district": "Biình Thạnh",
+      "addr:housenumber": "241A",
+      "addr:street": "Chu Văn An",
+      "addr:subdistrict": "12",
+      "name": "Co.op Mart - Chu Văn An",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7062421085,
+    "lat": 10.7783046,
+    "lon": 106.6651431,
+    "tags": {
+      "name:en": "Big C",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7073950886,
+    "lat": 10.7374337,
+    "lon": 106.7255522,
+    "tags": {
+      "brand": "Big C",
+      "brand:wikidata": "Q858665",
+      "brand:wikipedia": "en:Big C",
+      "name": "Big C",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7078025375,
+    "lat": 10.7967710,
+    "lon": 106.6866507,
+    "tags": {
+      "addr:city": "Ho Chi Minh City",
+      "addr:district": "Phú Nhuận",
+      "addr:housenumber": "386-388",
+      "addr:province": "Hồ Chí Minh",
+      "addr:street": "Trường Sa",
+      "addr:subdistrict": "Phường 2",
+      "brand": "BambooBebe",
+      "description": "Bamboo Bebe mang đến các sản phẩm đa dạng như: khăn sữa, khăn đa năng, khăn tắm, khăn mặt,thảm lót chống thấm, gối chống bẹp đầu, quần áo, các sản phẩm hỗ trợ cho mẹ và bé, tã vải, nước giặt…",
+      "email": "store@gureumi.vn",
+      "name": "BambooBebe Việt Nam",
+      "opening_hours": "Mo-Su 09:00-21:00",
+      "operator": "Công ty TNHH Gureumi",
+      "phone": "090 951 11 94",
+      "shop": "supermarket",
+      "website": "www.bamboobebevietnam.com"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7078048746,
+    "lat": 10.7967542,
+    "lon": 106.6866392,
+    "tags": {
+      "addr:city": "Ho Chi Minh City",
+      "addr:district": "Phú Nhuận",
+      "addr:housenumber": "386-388",
+      "addr:province": "Hồ Chí Minh",
+      "addr:street": "Trường Sa",
+      "addr:subdistrict": "Phường 2",
+      "email": "store@gureumi.vn",
+      "name": "Công ty TNHH Gureumi",
+      "opening_hours": "Mo-Su 09:00-20:00",
+      "operator": "Công ty TNHH Gureumi",
+      "shop": "supermarket",
+      "website": "https://gureumi.store/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7211180988,
+    "lat": 10.8346792,
+    "lon": 106.6676863,
+    "tags": {
+      "addr:street": "Hẻm 1369/18 Phan Văn Trị",
+      "branch": "Cityland",
+      "brand": "WinMart",
+      "brand:wikidata": "Q60245505",
+      "name": "WinMart",
+      "not:brand:wikidata": "Q60245505",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7224252399,
+    "lat": 10.7796852,
+    "lon": 106.6203496,
+    "tags": {
+      "addr:housenumber": "135B - 135C",
+      "addr:street": "Bình Long",
+      "name": "Bách Hoá Xanh",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7229244285,
+    "lat": 10.7680411,
+    "lon": 106.6180943,
+    "tags": {
+      "addr:housenumber": "132",
+      "addr:street": "Liên khu 10-11",
+      "name": "Bách Hoá Xanh",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7229273985,
+    "lat": 10.7719197,
+    "lon": 106.6218613,
+    "tags": {
+      "addr:housenumber": "287",
+      "addr:street": "Đường Phan Anh",
+      "name": "Bách Hoá Xanh",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7229398585,
+    "lat": 10.7725953,
+    "lon": 106.6140784,
+    "tags": {
+      "addr:housenumber": "52",
+      "addr:street": "Trương Phước Phan",
+      "name": "Bách Hoá Xanh",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7229407436,
+    "lat": 10.7755893,
+    "lon": 106.6151222,
+    "tags": {
+      "addr:housenumber": "220B",
+      "addr:street": "Đường Lê Văn Quới",
+      "name": "Bách Hoá Xanh",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7229679985,
+    "lat": 10.7676726,
+    "lon": 106.6134299,
+    "tags": {
+      "addr:housenumber": "20",
+      "addr:street": "Đường Trương Phước Phan",
+      "name": "Bách Hoá Xanh",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7229699885,
+    "lat": 10.7749137,
+    "lon": 106.6172651,
+    "tags": {
+      "addr:housenumber": "155",
+      "addr:street": "Đường Lê Văn Quới",
+      "name": "Bách Hoá Xanh",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7229709585,
+    "lat": 10.7876284,
+    "lon": 106.6151599,
+    "tags": {
+      "addr:housenumber": "81",
+      "addr:street": "Kênh Nước Đen",
+      "name": "Bách Hoá Xanh",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7230049385,
+    "lat": 10.7857612,
+    "lon": 106.6129109,
+    "tags": {
+      "addr:housenumber": "15b",
+      "addr:street": "Đường số 5C",
+      "name": "Bách Hoá Xanh",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7243916386,
+    "lat": 10.7843036,
+    "lon": 106.6157756,
+    "tags": {
+      "addr:housenumber": "175C",
+      "addr:street": "Đường số 8",
+      "name": "Bách Hoá XXanh 175C Đường Số 8",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7436469385,
+    "lat": 10.7808095,
+    "lon": 106.6785971,
+    "tags": {
+      "addr:street": "Nguyễn Phúc Nguyên",
+      "brand": "WinMart",
+      "brand:wikidata": "Q60245505",
+      "name": "WinMart",
+      "not:brand:wikidata": "Q60245505",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7499892808,
+    "lat": 10.7559254,
+    "lon": 106.7083025,
+    "tags": {
+      "name": "Chợ 200",
+      "name:en": "Street food Market 200",
+      "name:id": "Pasar jajanan jalanan 200",
+      "name:ko": "200 길거리음식시장",
+      "name:zh": "уличный рынок 200",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7829883985,
+    "lat": 10.7992930,
+    "lon": 106.6993939,
+    "tags": {
+      "name": "Foodmart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 8100983490,
+    "lat": 10.7459593,
+    "lon": 106.6830717,
+    "tags": {
+      "name": "Bách Hoá Xanh",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 8114415510,
+    "lat": 10.8127404,
+    "lon": 106.7724843,
+    "tags": {
+      "addr:city": "Hồ Chí Minh",
+      "addr:district": "9",
+      "addr:housenumber": "137",
+      "addr:postcode": "70000",
+      "addr:street": "Đại Lộ 3",
+      "addr:subdistrict": "Phước Bình",
+      "name": "Cửa Hàng Thú Cưng Haru",
+      "opening_hours": "Mo-Su 09:00-21:00",
+      "operator": "Doanh Nghiệp",
+      "payment:cash": "yes",
+      "payment:credit_cards": "yes",
+      "phone": "0908955389",
+      "shop": "supermarket",
+      "website": "https://harupetshop.com/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 8826976565,
+    "lat": 10.8881488,
+    "lon": 106.6145888,
+    "tags": {
+      "addr:city": "Hồ Chí Minh",
+      "addr:district": "Hóc Môn",
+      "addr:housenumber": "67/4",
+      "addr:province": "TP Hồ Chí Minh",
+      "addr:street": "Trịnh Thị Miếng, ấp Tam Đông",
+      "addr:subdistrict": "Thới Tam Thôn",
+      "name": "Bách Hoá Hạnh Dương",
+      "opening_hours": "24/7",
+      "payment:cash": "yes",
+      "phone": "0359496883",
+      "shop": "supermarket",
+      "website": "https://www.hanhduong.com"
+    }
+  },
+  {
+    "type": "node",
+    "id": 8929032542,
+    "lat": 10.7684286,
+    "lon": 106.6645542,
+    "tags": {
+      "addr:city": "Ho Chi Minh City",
+      "addr:district": "10",
+      "addr:housenumber": "3/53/2",
+      "addr:street": "Thành Thái",
+      "addr:subdistrict": "14",
+      "name": "Của Hàng Tạp Hóa TA",
+      "opening_hours": "Mo-Su 09:00-22:00",
+      "phone": "0918145855",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9025190544,
+    "lat": 10.7957444,
+    "lon": 106.6271801,
+    "tags": {
+      "addr:city": "TPHCM",
+      "addr:district": "Quận Tân Phú",
+      "addr:housenumber": "61",
+      "addr:postcode": "72011",
+      "addr:province": "Vietnam",
+      "addr:street": "Gò Dãu",
+      "addr:subdistrict": "Phường Tân Quý",
+      "description": "Chuyên cung cấp Mặt nạ hóa trang halloween, Khăn choàng cổ, Cây thông Noel,...",
+      "image": "https://hoachitin.com/hoa-chi-tin-dd.jpg",
+      "name": "Cửa Hàng Cung Cấp Đồ Hoá Trang Hoa Chí Tín",
+      "opening_hours": "Mo-Su 09:00-21:00",
+      "operator": "Mặt nạ hóa trang Halloween, Khăn choàng cổ, Cây thông noel,...",
+      "payment:cash": "yes",
+      "payment:credit_cards": "yes",
+      "payment:debit_cards": "yes",
+      "payment:mastercard": "yes",
+      "payment:telephone_cards": "yes",
+      "payment:visa": "yes",
+      "payment:visa_debit": "yes",
+      "phone": "+84902366635",
+      "shop": "supermarket",
+      "source": "survey;local knowledge;aerial imagery;gps;streetlevel imagery",
+      "start_date": "2012-10-02",
+      "website": "https://hoachitin.com"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9325963947,
+    "lat": 10.8304431,
+    "lon": 106.6216245,
+    "tags": {
+      "addr:city": "Hồ Chí Minh",
+      "addr:district": "Quận 12",
+      "addr:housenumber": "29/4",
+      "addr:street": "Trường Chinh",
+      "addr:subdistrict": "Tân Thới Nhất",
+      "name": "Kho Hàng Hùng Hậu",
+      "opening_hours": "24/7",
+      "phone": "0901300442",
+      "shop": "supermarket",
+      "website": "https://hunghauco.vn/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9326078202,
+    "lat": 10.8303666,
+    "lon": 106.6215521,
+    "tags": {
+      "name": "Tạp Hoá Chú 8",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9584838632,
+    "lat": 10.7750213,
+    "lon": 106.6331973,
+    "tags": {
+      "name": "Siêu Thị Auchan Lũy Bán Bích",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9584841103,
+    "lat": 10.8182143,
+    "lon": 106.6308605,
+    "tags": {
+      "name": "Co.op Mart Thắng Lợi",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9584911957,
+    "lat": 10.7716235,
+    "lon": 106.6807503,
+    "tags": {
+      "name": "Siêu Thị Aeon Citimart Cao Thắng",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9585048349,
+    "lat": 10.7896958,
+    "lon": 106.6397916,
+    "tags": {
+      "name": "Siêu thị GO! Âu Cơ",
+      "name:en": "GO! Au Co",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9585048351,
+    "lat": 10.7940316,
+    "lon": 106.6392661,
+    "tags": {
+      "name": "Siêu thị Co.opmarrt SCA Âu Cơ",
+      "name:en": "Co.opmarrt SCA Au Co Supermarket",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9585117677,
+    "lat": 10.7748338,
+    "lon": 106.6746916,
+    "tags": {
+      "name": "Siêu Thị Co.opmart",
+      "name:en": "Co.opmart Cao Thang Supermarket",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9585186635,
+    "lat": 10.7544616,
+    "lon": 106.6339575,
+    "tags": {
+      "name": "Co.op Mart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9585983486,
+    "lat": 10.8014176,
+    "lon": 106.7331065,
+    "tags": {
+      "addr:city": "Thành phố Thủ Đức",
+      "addr:district": "2",
+      "addr:housenumber": "12",
+      "addr:province": "Hồ Chí Minh",
+      "addr:street": "Quốc Hương",
+      "addr:subdistrict": "Thảo Điền",
+      "name": "Tops Market - Thảo Điền",
+      "opening_hours": "Mo-Su 07:30-22:00",
+      "phone": "+84 28 3519 3224",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9586952125,
+    "lat": 10.7564696,
+    "lon": 106.6781767,
+    "tags": {
+      "name": "Coop Food - Chung cư Phan Văn Trị",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9587171489,
+    "lat": 10.7651068,
+    "lon": 106.6015456,
+    "tags": {
+      "name": "Siêu thị Co.opmart Bình Tân 2",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9587252978,
+    "lat": 10.7405361,
+    "lon": 106.6173551,
+    "tags": {
+      "name": "Siêu Thị 7Map",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9587252979,
+    "lat": 10.8053220,
+    "lon": 106.7520062,
+    "tags": {
+      "name": "Trung Tâm Thương Mại",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9587253814,
+    "lat": 10.7324976,
+    "lon": 106.7288103,
+    "tags": {
+      "name": "Siêu thị Finelife Riviera Point",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9587309943,
+    "lat": 10.8305867,
+    "lon": 106.7137412,
+    "tags": {
+      "name": "Mazda Bình Triệu",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9587566621,
+    "lat": 10.7443048,
+    "lon": 106.6552043,
+    "tags": {
+      "name": "Siêu thị Co.opmart Tuy Lý Vương",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9587618720,
+    "lat": 10.7793635,
+    "lon": 106.6312584,
+    "tags": {
+      "branch": "Phú Thạnh",
+      "brand": "Big C",
+      "brand:wikidata": "Q858665",
+      "name": "Big C",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9587618744,
+    "lat": 10.8642107,
+    "lon": 106.7341900,
+    "tags": {
+      "name": "Coopmart Tam Bình",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9593240662,
+    "lat": 10.8286526,
+    "lon": 106.6197414,
+    "tags": {
+      "addr:housenumber": "102",
+      "addr:street": "Đường Phan Văn Hớn",
+      "branch": "Phan Văn Hớn",
+      "name": "Co.opmart",
+      "opening_hours": "Mo-Su 08:00-22:00",
+      "phone": "+842838155484",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9593358301,
+    "lat": 10.7516211,
+    "lon": 106.7350294,
+    "tags": {
+      "name": "Southern AEON Citimart Tân Thuận",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9593386627,
+    "lat": 10.8891434,
+    "lon": 106.6066732,
+    "tags": {
+      "name": "CoopMart Hóc Môn",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9593386629,
+    "lat": 10.6738545,
+    "lon": 106.7359282,
+    "tags": {
+      "name": "CoopMart Nguyễn Bình",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9593797953,
+    "lat": 10.8778160,
+    "lon": 106.6399416,
+    "tags": {
+      "name": "CoopMart Hiệp Thành",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9593946651,
+    "lat": 10.9589138,
+    "lon": 106.5042350,
+    "tags": {
+      "name": "Siêu Thị CoopMart Củ Chi",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9593946652,
+    "lat": 10.8941645,
+    "lon": 106.5986145,
+    "tags": {
+      "name": "Co.opmart Đỗ Văn Dậy",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9605255261,
+    "lat": 10.7764837,
+    "lon": 106.6216044,
+    "tags": {
+      "addr:city": "Hồ Chí Minh",
+      "addr:district": "Tân Phú",
+      "addr:housenumber": "80",
+      "addr:postcode": "700000",
+      "addr:province": "Hồ Chí Minh",
+      "addr:street": "Đường Bình Long",
+      "addr:subdistrict": "Phú Thạnh",
+      "brand": "Nội thất Auli Star",
+      "description": "Cửa hàng nội thất Auli Star chuyên nhập khẩu, phân phối và sản xuất thiết bị vệ sinh, thiết bị nhà bếp cao cấp như: Chậu rửa bát, lavabo rửa mặt, bồn cầu auli star, vòi sen tắm, bồn tắm, máy nước nóng năng lượng mặt trời",
+      "name": "Cửa hàng nội thất Auli Star",
+      "opening_hours": "24/7",
+      "operator": "CÔNG TY TNHH XÂY DỰNG TRANG TRÍ NỘI THẤT TRUNG VIỆT",
+      "payment:cash": "yes",
+      "payment:mastercard": "yes",
+      "payment:visa": "yes",
+      "phone": "+84335942468",
+      "shop": "supermarket",
+      "website": "https://aulistar.vn/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9645043685,
+    "lat": 10.7891717,
+    "lon": 106.7186066,
+    "tags": {
+      "addr:city": "Phường 22",
+      "addr:district": "Binh Thanh",
+      "addr:housenumber": "92",
+      "addr:province": "Ho Chi Minh",
+      "addr:street": "Nguyễn Hữu Cảnh",
+      "addr:subdistrict": "Opal Tower, Shophouse SH06-07",
+      "name": "Annam Gourmet",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9921298480,
+    "lat": 10.7680881,
+    "lon": 106.6845432,
+    "tags": {
+      "name": "Grove Fresh",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 10164648581,
+    "lat": 10.8508817,
+    "lon": 106.7516363,
+    "tags": {
+      "addr:city": "Phường Linh Tây",
+      "addr:district": "Quan Thu Duc",
+      "addr:housenumber": "71",
+      "addr:province": "TPHCM",
+      "addr:street": "Đường Dương Văn Cam",
+      "addr:subdistrict": "phường 4",
+      "description": "- Sản phẩm đa dạng. Có kho hàng lớn, chúng tôi thu mua trọn gói, đủ loại giá kệ. Ngoài ra chúng tôi còn thu mua các đồ cũ khác như thu mua bàn ghế cafe. Đồ gỗ gia đình, đồ cũ, đồ cũ nhà hàng, đồ gỗ khách sạn, đồ gỗ nhà hàng, đồ gỗ cũ ...\n  - Công việc gia",
+      "name": "thu mua kệ siêu thị cũ muskvn",
+      "opening_hours": "Mo-Fr 09:00-18:00",
+      "phone": "0904140007",
+      "shop": "supermarket",
+      "website": "https://musk.vn/thu-mua-ke-sieu-thi-tp-ho-chi-minh"
+    }
+  },
+  {
+    "type": "node",
+    "id": 10164648895,
+    "lat": 10.8515755,
+    "lon": 106.7508955,
+    "tags": {
+      "addr:city": "Phường Linh Tây",
+      "addr:district": "quận thủ đức",
+      "addr:housenumber": "71",
+      "addr:street": "Đường Dương Văn Cam",
+      "addr:subdistrict": "phường 4",
+      "description": "Những thương hiệu được niêm yết trên Musk.vn đều là những đơn vị nổi tiếng lâu năm hoạt động trong lĩnh vực nhận và thanh toán hàng đã qua sử dụng.\nWebsite: https://musk.vn/thu-mua-ke-go-tp-ho-chi-minh\nThông tin liên hệ: Phone: 0904140007",
+      "opening_hours": "Mo-Su 09:00-21:00",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 10164777466,
+    "lat": 10.8509633,
+    "lon": 106.7515015,
+    "tags": {
+      "addr:city": "Thành phố Thủ Đức",
+      "addr:district": "quận thủ đức",
+      "addr:housenumber": "71",
+      "addr:province": "TPHCM",
+      "addr:street": "Đường Dương Văn Cam",
+      "addr:subdistrict": "phường 4",
+      "description": "Các đơn vị mua hàng do Musk.vn giới thiệu luôn ưu tiên hàng đầu. Quý khách hàng có thể liên hệ và sử dụng dịch vụ thu mua giường gỗ cũ TPHCM không kể thứ 7, chủ nhật hay ngày lễ.\nPhone: 0904140007\nĐịa chỉ: 71 Dương Văn Cam, Khu Phố 6, Thủ Đức, Tphcm",
+      "name": "thumuagiuonggocumuskvn",
+      "opening_hours": "Mo-Sa 08:00-18:00",
+      "phone": "0904140007",
+      "shop": "supermarket",
+      "website": "https://musk.vn/thu-mua-giuong-go-tp-ho-chi-minh"
+    }
+  },
+  {
+    "type": "node",
+    "id": 10164939977,
+    "lat": 10.8510494,
+    "lon": 106.7514141,
+    "tags": {
+      "addr:city": "Thành phố Thủ Đức",
+      "addr:district": "Quan Thu Duc",
+      "addr:housenumber": "17",
+      "addr:province": "TPHCM",
+      "addr:street": "Đường Dương Văn Cam",
+      "addr:subdistrict": "phường 4",
+      "description": "các đơn vị thu mua giường tầng cũ công khai, minh bạch và chính xác. Giá sẽ dựa trên tình trạng thực tế của giường. Cam kết không ép giá, ép khách bán với giá quá thấp.\nThông tin liên hệ:\nPhone: 0904140007\nĐịa chỉ: 71 Dương Văn Cam, Khu Phố 6, Thủ Đức, Th",
+      "name": "thumuagiuongtangmuskvn",
+      "opening_hours": "Mo-Fr 09:00-17:00",
+      "phone": "0904140007",
+      "shop": "supermarket",
+      "website": "https://musk.vn/thu-mua-giuong-tang-tp-ho-chi-minh"
+    }
+  },
+  {
+    "type": "node",
+    "id": 10229741470,
+    "lat": 10.7711740,
+    "lon": 106.6299894,
+    "tags": {
+      "addr:city": "Hồ Chí Minh",
+      "addr:district": "Tân Phú",
+      "addr:housenumber": "204",
+      "addr:street": "Đường Hòa Bình",
+      "addr:subdistrict": "Hiệp Tân",
+      "name": "USAMua - Mua Hàng Mỹ",
+      "opening_hours": "Mo-Su 08:00-21:00",
+      "payment:cash": "yes",
+      "payment:credit_cards": "yes",
+      "payment:debit_cards": "yes",
+      "phone": "+84 0933726898",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 10246071319,
+    "lat": 10.7850433,
+    "lon": 106.6309412,
+    "tags": {
+      "addr:city": "Hồ Chí Minh",
+      "addr:district": "Tân Phú",
+      "addr:housenumber": "192/34/1",
+      "addr:province": "Hồ Chí Minh",
+      "addr:street": "Phú Thọ Hoà",
+      "addr:subdistrict": "Phú Thọ Hòa",
+      "name": "Phụ Kiện Bida Minh Điền",
+      "note": "Chuyên Mua Bán Phụ Kiện Bida",
+      "opening_hours": "24/7",
+      "operator": "MINH ĐIỀN BILLIARDS",
+      "payment:mastercard": "yes",
+      "payment:visa": "yes",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 10294185712,
+    "lat": 10.8444032,
+    "lon": 106.7626007,
+    "tags": {
+      "brand": "Tops",
+      "brand:th": "ท็อปส์",
+      "brand:wikidata": "Q7825140",
+      "name": "Tops",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 10539950899,
+    "lat": 10.7999158,
+    "lon": 106.6939909,
+    "tags": {
+      "name": "Chợ Vạn Kiếp",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 10725532941,
+    "lat": 10.7778588,
+    "lon": 106.6347190,
+    "tags": {
+      "addr:city": "Hồ Chí Minh",
+      "addr:district": "Tân Phú",
+      "addr:housenumber": "555",
+      "addr:street": "Đường Lũy Bán Bích",
+      "addr:subdistrict": "Phú Thạnh",
+      "name": "USAMua - Mua Hàng Mỹ",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 10777134131,
+    "lat": 10.7900679,
+    "lon": 106.7111094,
+    "tags": {
+      "addr:city": "Ho Chi Minh City",
+      "addr:district": "Bình Thạnh",
+      "addr:housenumber": "76A",
+      "addr:postcode": "700000",
+      "addr:province": "Hồ Chí Minh",
+      "addr:street": "Đường Phạm Viết Chánh",
+      "addr:subdistrict": "Phường 19",
+      "air_conditioning": "yes",
+      "diet:meat": "yes",
+      "email": "basao.net@gmail.com",
+      "image": "https://www.facebook.com/photo/?fbid=198696639432332&set=a.198696636098999",
+      "internet_access": "yes",
+      "internet_access:fee": "customers",
+      "name": "Cửa hàng Bách hóa Basao Grocery",
+      "opening_hours": "Mo-Su 07:00-22:00",
+      "operator": "Bách hóa Basao",
+      "organic": "only",
+      "payment:app": "yes",
+      "payment:cards": "yes",
+      "payment:cash": "yes",
+      "payment:credit_cards": "yes",
+      "payment:debit_cards": "yes",
+      "payment:mastercard": "yes",
+      "payment:visa": "yes",
+      "payment:visa_debit": "yes",
+      "phone": "0982896297",
+      "shop": "supermarket",
+      "toilets": "yes",
+      "website": "https://www.facebook.com/basao.net",
+      "wikipedia": "vi:https://zalo.me/84982896297"
+    }
+  },
+  {
+    "type": "node",
+    "id": 10801342656,
+    "lat": 10.7957801,
+    "lon": 106.6953508,
+    "tags": {
+      "addr:city": "HCMC",
+      "addr:district": "Quan Binh Thanh",
+      "addr:housenumber": "24",
+      "addr:street": "Vũ Huy Tấn",
+      "addr:subdistrict": "3",
+      "name": "Gạo Hồng Nhung",
+      "opening_hours": "Mo-Su 08:00-20:00",
+      "phone": "0979354567",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 10807959905,
+    "lat": 10.7773144,
+    "lon": 106.7055429,
+    "tags": {
+      "name:en": "Circle K",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 10879939105,
+    "lat": 10.7706211,
+    "lon": 106.6793367,
+    "tags": {
+      "name:en": "Busy Morning Market",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11001842969,
+    "lat": 10.7931686,
+    "lon": 106.6722756,
+    "tags": {
+      "addr:city": "Ho Chi Minh City",
+      "addr:district": "Phú Nhuận",
+      "addr:housenumber": "123",
+      "addr:postcode": "70000",
+      "addr:province": "Hồ Chí Minh",
+      "addr:street": "Trần Hữu Trang",
+      "addr:subdistrict": "Phường 10",
+      "name": "Bách Hóa Xanh grocery store",
+      "opening_hours": "Mo-Su 09:00-21:00",
+      "payment:cash": "yes",
+      "payment:debit_cards": "yes",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11106925568,
+    "lat": 10.8329211,
+    "lon": 106.5636098,
+    "tags": {
+      "addr:city": "TPHCM",
+      "addr:district": "Bình Chánh",
+      "addr:housenumber": "C7/7",
+      "addr:postcode": "71821",
+      "addr:province": "TPHCM",
+      "addr:street": "Nữ Dân Công",
+      "addr:subdistrict": "Vĩnh Lộc A",
+      "name": "Cổng Nhôm Đúc Hoàng Gia | Lan Can - Cầu Thang - Hàng Rào Nhôm Đúc",
+      "opening_hours": "Mo-Su 07:30-22:00",
+      "operator": "Cổng Nhôm Đúc Hoàng Gia",
+      "payment:jcb": "yes",
+      "payment:mastercard": "yes",
+      "payment:visa": "yes",
+      "phone": "+84376 156 078",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11124634717,
+    "lat": 10.7684748,
+    "lon": 106.6986624,
+    "tags": {
+      "addr:city": "TP. Hồ Chí Minh",
+      "addr:district": "District 1",
+      "addr:housenumber": "116",
+      "addr:postcode": "70000",
+      "addr:street": "Nguyễn Thái Bình",
+      "addr:subdistrict": "Phường Nguyễn Thái Bình",
+      "name": "116 Culture Luxury",
+      "opening_hours": "Mo-Su 09:00-22:00",
+      "phone": "0911 618 116",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11152431366,
+    "lat": 10.8451011,
+    "lon": 106.8387009,
+    "tags": {
+      "addr:city": "Thành phố Thủ Đức",
+      "addr:postcode": "700000",
+      "addr:street": "Đường D4, Tòa S10.02",
+      "addr:subdistrict": "Long Thạnh Mỹ",
+      "name": "King Food Mart - S10.02 Vinhomes Grand Park",
+      "opening_hours": "Mo-Su 09:00-21:00",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11164345794,
+    "lat": 10.8044555,
+    "lon": 106.7470369,
+    "tags": {
+      "operator": "Annam Gourmet",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11328890468,
+    "lat": 10.8451775,
+    "lon": 106.8387249,
+    "tags": {
+      "addr:city": "Thành phố Thủ Đức",
+      "addr:housenumber": "Tòa S10.02",
+      "addr:postcode": "700000",
+      "addr:street": "Đường D4",
+      "addr:subdistrict": "Long Thạnh Mỹ",
+      "name": "HiepDoanShop",
+      "opening_hours": "Mo-Su 09:00-21:00",
+      "operator": "Hiep Doan",
+      "payment:cash": "yes",
+      "payment:credit_cards": "yes",
+      "payment:visa": "yes",
+      "phone": "+84968258804",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11374778363,
+    "lat": 10.8651908,
+    "lon": 106.6644966,
+    "tags": {
+      "addr:city": "Hồ Chí Minh",
+      "addr:district": "Quận 12",
+      "addr:housenumber": "9A",
+      "addr:province": "Hồ Chí Minh",
+      "addr:street": "Đường Thạnh Xuân 13",
+      "addr:subdistrict": "Thạnh Xuân",
+      "brand": "FamilyMart",
+      "name": "FamilyMart",
+      "opening_hours": "24/7",
+      "payment:app": "yes",
+      "payment:cash": "yes",
+      "payment:contactless": "yes",
+      "payment:debit_cards": "yes",
+      "payment:jcb": "yes",
+      "payment:mastercard": "yes",
+      "payment:visa": "yes",
+      "shop": "supermarket",
+      "website": "https://www.famima.vn/en/home/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11433411769,
+    "lat": 10.7656009,
+    "lon": 106.6947703,
+    "tags": {
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11515855866,
+    "lat": 10.7532921,
+    "lon": 106.6747077,
+    "tags": {
+      "name": "Cửa Hàng Vinh Phát",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11527625171,
+    "lat": 10.8260415,
+    "lon": 106.6893060,
+    "tags": {
+      "name": "Lẩu cá kèo",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11533727958,
+    "lat": 10.7782504,
+    "lon": 106.7020738,
+    "tags": {
+      "addr:floor": "B3",
+      "addr:housenumber": "72",
+      "addr:street": "Đường Lê Thánh Tôn",
+      "brand": "WinMart",
+      "brand:wikidata": "Q60245505",
+      "check_date": "2024-01-20",
+      "level": "-3",
+      "name": "WinMart",
+      "payment:cash": "yes",
+      "payment:mastercard": "yes",
+      "payment:visa": "yes",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11612841316,
+    "lat": 10.7822160,
+    "lon": 106.7191754,
+    "tags": {
+      "addr:city": "Thành phố Hồ Chí Minh",
+      "addr:district": "Quận 2",
+      "addr:housenumber": "23",
+      "addr:street": "Trần Bạch Đằng",
+      "addr:subdistrict": "Thủ Thiêm",
+      "name": "Vive Gourmet Food & Wine - The River",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11944303584,
+    "lat": 10.8654316,
+    "lon": 106.6644834,
+    "tags": {
+      "addr:city": "Hồ Chí Minh",
+      "addr:district": "Quận 12",
+      "addr:postcode": "71500",
+      "addr:province": "Hồ Chí Minh",
+      "addr:street": "Đường Thạnh Xuân 13",
+      "addr:subdistrict": "Thạnh Xuân",
+      "brand": "WinMart",
+      "brand:wikidata": "Q60245505",
+      "name": "WinMart",
+      "payment:app": "yes",
+      "payment:apple_pay": "yes",
+      "payment:cash": "yes",
+      "payment:contactless": "yes",
+      "payment:credit_cards": "yes",
+      "payment:debit_cards": "yes",
+      "payment:mastercard": "yes",
+      "payment:visa": "yes",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12249396552,
+    "lat": 10.8460221,
+    "lon": 106.7103906,
+    "tags": {
+      "addr:city": "TP. Thủ Đức, TP. Hồ Chí Minh",
+      "addr:district": "P. Hiệp Bình Phước",
+      "addr:housenumber": "2",
+      "addr:postcode": "70000",
+      "addr:province": "Hồ Chí Minh",
+      "addr:street": "Đường số 34",
+      "addr:subdistrict": "Khu đô thị Vạn Phúc",
+      "contact:facebook": "https://www.facebook.com/phimcachnhietNanoX",
+      "email": "contact@nanox.vn",
+      "image": "https://nanox.vn/wp-content/uploads/2024/07/nanox-uv400-skincare-b30s-5.jpg",
+      "name": "Phim cách nhiệt nhà kính NanoX",
+      "opening_hours": "Mo-Fr 09:00-17:00",
+      "operator": "dán kính cách nhiệt NanoX",
+      "payment:cards": "yes",
+      "payment:cash": "yes",
+      "payment:debit_cards": "yes",
+      "payment:visa": "yes",
+      "phone": "0777888797",
+      "shop": "supermarket",
+      "short_name": "phimcachnhietnhakinhnanox",
+      "website": "https://nanox.vn/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12298428762,
+    "lat": 10.7769683,
+    "lon": 106.7551554,
+    "tags": {
+      "name": "Annam Gourmet",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12299044714,
+    "lat": 10.7804412,
+    "lon": 106.7350838,
+    "tags": {
+      "name": "Nam An Market",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12351174664,
+    "lat": 10.7781697,
+    "lon": 106.7471246,
+    "tags": {
+      "name": "WinMart",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12546141701,
+    "lat": 10.7680533,
+    "lon": 106.6984934,
+    "tags": {
+      "name": "Mini stop",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12558432021,
+    "lat": 10.7972600,
+    "lon": 106.6182984,
+    "tags": {
+      "addr:city": "Phường Tân Quý",
+      "addr:district": "Tân Phú",
+      "addr:housenumber": "38",
+      "addr:postcode": "700000",
+      "addr:province": "Hồ Chí Minh",
+      "addr:street": "Đỗ Công Tường",
+      "addr:subdistrict": "Tân Quý",
+      "name": "Chả cua Huế",
+      "opening_hours": "24/7",
+      "operator": "Chả cua Huế",
+      "payment:cash": "yes",
+      "phone": "0906431619",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12558433787,
+    "lat": 10.7972833,
+    "lon": 106.6184076,
+    "tags": {
+      "addr:city": "Phường Tân Quý",
+      "addr:district": "Tân Phú",
+      "addr:housenumber": "36",
+      "addr:postcode": "700000",
+      "addr:province": "Hồ Chí Minh",
+      "addr:street": "Đỗ Công Tường",
+      "addr:subdistrict": "Tân Quý",
+      "name": "Shop Vinafood",
+      "opening_hours": "24/7",
+      "operator": "Vinafood.Shop",
+      "payment:credit_cards": "yes",
+      "phone": "0935655753",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12563213356,
+    "lat": 10.7611331,
+    "lon": 106.6307838,
+    "tags": {
+      "addr:city": "Ho Chi Minh City",
+      "addr:district": "Quận Tân Phú",
+      "addr:housenumber": "34",
+      "addr:postcode": "72015",
+      "addr:province": "Hồ Chí Minh",
+      "addr:street": "Đường Lương Minh Nguyệt",
+      "addr:subdistrict": "Phường Tân Thới Hòa",
+      "air_conditioning": "yes",
+      "branch": "Lương Minh Nguyệt",
+      "name": "Bách Hoá XANH",
+      "opening_hours": "Mo-Su 06:30-21:30",
+      "operator": "Bách Hoá Xanh",
+      "payment:cash": "yes",
+      "payment:contactless": "yes",
+      "payment:credit_cards": "yes",
+      "payment:debit_cards": "yes",
+      "phone": "19001908",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12564990769,
+    "lat": 10.7631261,
+    "lon": 106.5995005,
+    "tags": {
+      "addr:district": "Bình Tân",
+      "addr:housenumber": "428/3",
+      "addr:province": "Hồ Chí Minh",
+      "addr:street": "Chiến Lược",
+      "addr:subdistrict": "Bình Trị Đông A",
+      "name": "Túi Giấy Giá Rẻ",
+      "opening_hours": "Mo-Sa 08:00-17:00",
+      "phone": "0903501844",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12622902601,
+    "lat": 10.7934000,
+    "lon": 106.7067969,
+    "tags": {
+      "name": "Bach hoa XANX",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12633673701,
+    "lat": 10.7405627,
+    "lon": 106.6781670,
+    "tags": {
+      "name": "AEON Ta Quang Buu",
+      "name:vi": "AEON Tạ Quang Bửu",
+      "shop": "supermarket"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12701585646,
+    "lat": 10.8053618,
+    "lon": 106.6977165,
+    "tags": {
+      "addr:city": "TP Hồ Chí Minh",
+      "addr:district": "Quận Bình Thạnh",
+      "addr:housenumber": "71B",
+      "addr:postcode": "70000",
+      "addr:province": "Thành phố Hồ Chí Minh",
+      "addr:street": "Lê Quang Định",
+      "addr:subdistrict": "phường 14",
+      "name": "Điện thoại VT Mobile",
+      "opening_hours": "Mo-Su 09:00-21:00",
+      "operator": "VT Mobile",
+      "phone": "0857887777",
+      "shop": "supermarket",
+      "website": "https://linkbio.co/vtmobile"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12707715425,
+    "lat": 10.8591365,
+    "lon": 106.6179405,
+    "tags": {
+      "name": "Bách hóa XANH.COM",
+      "opening_hours": "06:30-21:30",
+      "shop": "supermarket"
+    }
+  }
+  
+    ]
+  }
+  
