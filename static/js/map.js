@@ -83,8 +83,10 @@ const marketIcon = L.icon({
 
 
 
+const shopMarkers = []; // lưu các marker chợ/siêu thị
+let shopsVisible = false;
 
-
+//Đọc file CSV để thêm vào shoMarkers
 fetch("/static/chuyen_doi_quan_cafe.csv") // Đảm bảo đường dẫn đúng
   .then((response) => response.text())
   .then((csvText) => {
@@ -101,25 +103,52 @@ fetch("/static/chuyen_doi_quan_cafe.csv") // Đảm bảo đường dẫn đúng
 
 
         if (!isNaN(lat) && !isNaN(lon)) {
-          // Xác định icon theo loại cửa hàng
           let icon = shopType.toLowerCase().includes("supermarket") ? supermarketIcon : marketIcon;
-
-          // Tạo popup nội dung
+        
           let popupContent = `
             <b>${name}</b><br>
             Loại: ${shopType}<br>
             Giờ mở cửa: ${openingHours}<br>
-            Địa chỉ: ${address}
+            Địa chỉ: ${address}<br>
+            <button onclick="toggleRoute(this, ${lat}, ${lon})">Xem đường đi</button>
           `;
-
-          L.marker([lat, lon], { icon: icon })
-            .addTo(map)
-            .bindPopup(popupContent);
-        }
+        
+          let marker = L.marker([lat, lon], { icon: icon }).bindPopup(popupContent);
+          shopMarkers.push(marker); // không addTo map
+        }        
       }
     });
   })
   .catch((error) => console.error("Lỗi khi tải CSV:", error));
+
+
+// Hàm hiển thị/ẩn chợ và siêu thị
+  function toggleShopsAndMarkets() {
+    const button = document.getElementById("toggleMarkersBtn");
+  
+    if (shopsVisible) {
+      // Ẩn marker
+      shopMarkers.forEach(marker => map.removeLayer(marker));
+      // Xóa đường đi nếu đang có
+    if (routeControl) {
+      map.removeControl(routeControl);
+      routeControl = null;
+    }
+      button.textContent = "Hiển thị chợ và siêu thị";
+    } else {
+      // Hiện marker
+      shopMarkers.forEach(marker => marker.addTo(map));
+      button.textContent = "Ẩn chợ và siêu thị";
+    }
+  
+    shopsVisible = !shopsVisible;
+  }
+  
+
+  
+
+
+
 
 
 
@@ -133,12 +162,16 @@ fetch("/static/chuyen_doi_quan_cafe.csv") // Đảm bảo đường dẫn đúng
     popupAnchor: [0, -32]
   });
 
+
+  let userLocation = null;
+  let routeControl = null;
   map.locate({
     setView: true,              // Tự động đưa bản đồ về vị trí người dùng
     enableHighAccuracy: true   // Cố gắng lấy vị trí chính xác nhất
   })
   // Nếu tìm được vị trí → hiển thị marker
   .on("locationfound", (e) => {
+    userLocation = [e.latitude, e.longitude]; // Lưu lại vị trí người dùng
     // Tạo marker tại vị trí người dùng
     const marker = L.marker([e.latitude, e.longitude],{icon:userIcon}).addTo(map)
       .bindPopup("Vị trí hiện tại của bạn");
@@ -151,4 +184,51 @@ fetch("/static/chuyen_doi_quan_cafe.csv") // Đảm bảo đường dẫn đúng
     alert("Không thể lấy vị trí của bạn: " );
   });
   
+
+
+
+
+  
+
+
+
+//Hàm xóa đường đi
+  function toggleRoute(button, destLat, destLng) {
+    if (button.textContent === "Xem đường đi") {
+      if (!userLocation) {
+        alert("Chưa xác định được vị trí của bạn.");
+        return;
+      }
+  
+      // Xóa tuyến cũ nếu có
+      if (routeControl) {
+        map.removeControl(routeControl);
+      }
+  
+      // Tạo tuyến đường mới
+      routeControl = L.Routing.control({
+        waypoints: [
+          L.latLng(userLocation[0], userLocation[1]),
+          L.latLng(destLat, destLng)
+        ],
+        routeWhileDragging: false,
+        show: true,
+        addWaypoints: false,
+        createMarker: () => null // Không tạo thêm marker mặc định
+      }).addTo(map);
+  
+      // Đổi tên nút
+      button.textContent = "Xóa đường đi";
+    } else {
+      // Xóa đường đi
+      if (routeControl) {
+        map.removeControl(routeControl);
+        routeControl = null;
+      }
+      // Đổi tên nút lại
+      button.textContent = "Xem đường đi";
+    }
+  }
+  
+
 

@@ -5,9 +5,18 @@
     <link rel="stylesheet" href="{% static 'leaflet/leaflet.css' %}" >
     <link rel="stylesheet" href="{% static 'css/map.css' %}" >
     <script src="{% static 'leaflet/leaflet.js' %}"></script>
+    <!-- Leaflet Routing Machine -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
 </head>
 <body>
     {% include 'header.html' %}
+    <button id="toggleMarkersBtn" onclick="toggleShopsAndMarkets()" style="position: absolute; top: 10px; left: 10px; z-index: 1000;">
+        Hiển thị chợ và siêu thị
+      </button>
+      
+      
     <div class="row"><div id="map"></div></div>
     
 </body>
