@@ -1,24 +1,67 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="vi">
 <head>
-    <link rel="stylesheet" href="{% static 'leaflet/leaflet.css' %}" >
-    <link rel="stylesheet" href="{% static 'css/map.css' %}" >
-    <script src="{% static 'leaflet/leaflet.js' %}"></script>
-    <!-- Leaflet Routing Machine -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
-<script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <meta charset="UTF-8">
+    <title>Bản đồ Chợ & Siêu thị</title>
 
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="{% static 'leaflet/leaflet.css' %}">
+    <link rel="stylesheet" href="{% static 'css/map.css' %}">
+
+    <!-- Leaflet JS -->
+    <script src="{% static 'leaflet/leaflet.js' %}"></script>
+
+    <!-- Leaflet Routing Machine -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+    <style>
+        #map {
+            width: 100%;
+            height: 90vh;
+        }
+
+        .map-button {
+            position: absolute;
+            left: 10px;
+            z-index: 1000;
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+        }
+
+        #toggleMarkersBtn {
+            top: 10px;
+        }
+
+        #routeNearestBtn {
+            top: 60px;
+        }
+    </style>
 </head>
 <body>
+
     {% include 'header.html' %}
-    <button id="toggleMarkersBtn" onclick="toggleShopsAndMarkets()" style="position: absolute; top: 10px; left: 10px; z-index: 1000;">
+
+    <!-- Nút điều khiển -->
+    <button id="toggleMarkersBtn" class="map-button" onclick="toggleShopsAndMarkets()">
         Hiển thị chợ và siêu thị
-      </button>
-      
-      
-    <div class="row"><div id="map"></div></div>
-    
+    </button>
+
+    <button id="routeNearestBtn" class="map-button" onclick="routeToNearestShop()">
+        Tới địa điểm gần nhất
+    </button>
+
+    <!-- Bản đồ -->
+    <div id="map"></div>
+
+    <!-- JavaScript -->
+    <script src="{% static 'js/map.js' %}"></script>
+
 </body>
-<script  src="{% static 'js/map.js' %}"></script>
 </html>

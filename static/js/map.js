@@ -87,7 +87,7 @@ const shopMarkers = []; // lưu các marker chợ/siêu thị
 let shopsVisible = false;
 
 //Đọc file CSV để thêm vào shoMarkers
-fetch("/static/chuyen_doi_quan_cafe.csv") // Đảm bảo đường dẫn đúng
+fetch("/static/chuyen_doi_quan_cafe.csv?t=${Date.now()}") // Đảm bảo đường dẫn đúng
   .then((response) => response.text())
   .then((csvText) => {
     let rows = csvText.split("\n").slice(1); // Bỏ dòng tiêu đề
@@ -111,6 +111,8 @@ fetch("/static/chuyen_doi_quan_cafe.csv") // Đảm bảo đường dẫn đúng
             Giờ mở cửa: ${openingHours}<br>
             Địa chỉ: ${address}<br>
             <button onclick="toggleRoute(this, ${lat}, ${lon})">Xem đường đi</button>
+            <br>
+            <button onclick="goToContribution(${lat}, ${lon}, '${escapeString(name)}', '${escapeString(openingHours)}', '${escapeString(address)}')" style="margin-top:5px;">Đóng góp</button>
           `;
         
           let marker = L.marker([lat, lon], { icon: icon }).bindPopup(popupContent);
@@ -121,6 +123,14 @@ fetch("/static/chuyen_doi_quan_cafe.csv") // Đảm bảo đường dẫn đúng
   })
   .catch((error) => console.error("Lỗi khi tải CSV:", error));
 
+  function escapeString(str) {
+    return String(str)
+      .replace(/'/g, "\\'")
+      .replace(/"/g, '\\"')
+      .replace(/\n/g, " ")
+      .replace(/\r/g, " ");
+  }
+  
 
 // Hàm hiển thị/ẩn chợ và siêu thị
   function toggleShopsAndMarkets() {
@@ -232,3 +242,61 @@ fetch("/static/chuyen_doi_quan_cafe.csv") // Đảm bảo đường dẫn đúng
   
 
 
+
+//Hàm tìm đến chợ hoặc siêu thị gần nhất
+  function routeToNearestShop() {
+    if (!userLocation) {
+      alert("Không thể xác định vị trí của bạn.");
+      return;
+    }
+  
+    if (shopMarkers.length === 0) {
+      alert("Chưa có dữ liệu chợ hoặc siêu thị.");
+      return;
+    }
+  
+    // Tìm marker gần nhất
+    let nearestMarker = null;
+    let minDistance = Infinity;
+  
+    shopMarkers.forEach(marker => {
+      const latlng = marker.getLatLng();
+      const distance = map.distance(userLocation, latlng);
+      if (distance < minDistance) {
+        minDistance = distance;
+        nearestMarker = marker;
+      }
+    });
+  
+    if (!nearestMarker) {
+      alert("Không tìm được địa điểm gần nhất.");
+      return;
+    }
+  
+    // Xóa tuyến cũ nếu có
+    if (routeControl) {
+      map.removeControl(routeControl);
+    }
+  
+    // Tạo tuyến đường tới địa điểm gần nhất
+    routeControl = L.Routing.control({
+      waypoints: [
+        L.latLng(userLocation[0], userLocation[1]),
+        nearestMarker.getLatLng()
+      ],
+      routeWhileDragging: false,
+      addWaypoints: false,
+      createMarker: () => null
+    }).addTo(map);
+  
+    nearestMarker.openPopup(); // Hiển thị thông tin popup nếu muốn
+  }
+  
+
+  //Hàm chuyển sang trang đóng góp
+  function goToContribution(lat, lng, name, openingHours, address) {
+    const url = `/map/dong-gop?lat=${lat}&lng=${lng}&name=${encodeURIComponent(name)}&openingHours=${encodeURIComponent(openingHours)}&address=${encodeURIComponent(address)}`;
+    window.location.href = url;
+  }
+  
+  

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đóng góp thông tin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h2>Đóng góp thông tin cho địa điểm</h2>
+  <form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="lat" value="{{ lat }}">
+    <input type="hidden" name="lng" value="{{ lng }}">
+
+    <label for="name">Tên địa điểm:</label>
+    <input type="text" name="name" value="{{ name }}" required>
+
+    <label for="openingHours">Giờ mở cửa:</label>
+    <input type="text" name="openingHours" value="{{ openingHours }}">
+
+    <label for="address">Địa chỉ:</label>
+    <input type="text" name="address" value="{{ address }}">
+
+    <button type="submit">Lưu</button>
+  </form>
+</body>
+</html>
