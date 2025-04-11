@@ -3,6 +3,18 @@ from django.views.decorators.csrf import csrf_exempt
 import csv
 import os
 from django.conf import settings
+from .models import User
+from django.contrib.auth.hashers import make_password, check_password
+# Create your views here.
+def home(request):
+    print("Đã vào đây")
+    user_id = request.session.get('id')
+    if not user_id:
+        return redirect('login')
+    user = User.objects.get(id=user_id)
+    print(user.username)
+    print(user.name)
+    return render(request, 'home.html')
 # Create your views here.
 def map(request):
     return render(request, 'map.html')
@@ -70,3 +82,41 @@ def dong_gop_view(request):
     openingHours = request.GET.get("openingHours")
     address= request.GET.get("address")
     return render(request, "dong_gop.html", {"lat": lat, "lng": lng, "name": name, "openingHours": openingHours, "address": address})
+
+
+def register_view(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        username = request.POST['username']
+        phone = request.POST['phone']
+        password = make_password(request.POST['password'])
+        
+        # kiểm tra tài khoản đã tồn tại chưa
+        if User.objects.filter(username=username).exists():
+            return render(request, 'register.html', {'error': 'Tài khoản đã tồn tại'})
+        
+        User.objects.create(name=name, username=username, phone=phone, password=password)
+        return redirect('login/')
+    
+    return render(request, 'register.html')
+
+
+def login_view(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        try:
+            user = User.objects.get(username=username)
+            if check_password(password, user.password):
+                request.session['id'] = user.id
+                request.session['name'] = user.name
+                request.session['username'] = user.username
+                request.session['phone'] = user.phone
+                return redirect('/')
+            else:
+                return render(request, 'login.html', {'error': 'Sai mật khẩu'})
+        except User.DoesNotExist:
+            return render(request, 'login.html', {'error': 'Tài khoản không tồn tại'})
+
+    return render(request, 'login.html')

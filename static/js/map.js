@@ -110,7 +110,7 @@ fetch("/static/chuyen_doi_quan_cafe.csv?t=${Date.now()}") // Đảm bảo đư�
             Loại: ${shopType}<br>
             Giờ mở cửa: ${openingHours}<br>
             Địa chỉ: ${address}<br>
-            <button onclick="toggleRoute(this, ${lat}, ${lon})">Xem đường đi</button>
+            <button onclick="toggleRoute(this, ${lat}, ${lon})" id="btn_duong_di">Xem đường đi</button>
             <br>
             <button onclick="goToContribution(${lat}, ${lon}, '${escapeString(name)}', '${escapeString(openingHours)}', '${escapeString(address)}')" style="margin-top:5px;">Đóng góp</button>
           `;
@@ -131,6 +131,7 @@ fetch("/static/chuyen_doi_quan_cafe.csv?t=${Date.now()}") // Đảm bảo đư�
       .replace(/\r/g, " ");
   }
   
+const routeBtn = document.getElementById("btn_duong_di");
 
 // Hàm hiển thị/ẩn chợ và siêu thị
   function toggleShopsAndMarkets() {
@@ -279,6 +280,7 @@ fetch("/static/chuyen_doi_quan_cafe.csv?t=${Date.now()}") // Đảm bảo đư�
     }
   
     // Tạo tuyến đường tới địa điểm gần nhất
+    // Tạo tuyến đường tới địa điểm gần nhất
     routeControl = L.Routing.control({
       waypoints: [
         L.latLng(userLocation[0], userLocation[1]),
@@ -288,8 +290,29 @@ fetch("/static/chuyen_doi_quan_cafe.csv?t=${Date.now()}") // Đảm bảo đư�
       addWaypoints: false,
       createMarker: () => null
     }).addTo(map);
-  
-    nearestMarker.openPopup(); // Hiển thị thông tin popup nếu muốn
+
+    // LUÔN thêm marker vào bản đồ
+    nearestMarker.addTo(map);
+    
+    //Đổi button thành xóa đường đi
+    nearestMarker.openPopup();
+    setTimeout(() => {
+      const popup = document.querySelector(".leaflet-popup-content");
+      const btn = popup?.querySelector("#btn_duong_di");
+      if (btn) {
+        // Bạn có thể thao tác nút này
+        btn.textContent = "Xóa đường đi";
+        const nearestLatLng = nearestMarker.getLatLng();
+        btn.onclick = function () {
+          toggleRoute(this, nearestLatLng.lat, nearestLatLng.lng);
+        };
+      }
+    }, 100);
+    
+
+
+    // Hiển thị popup
+    nearestMarker.openPopup();
   }
   
 

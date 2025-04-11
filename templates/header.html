@@ -48,6 +48,12 @@
                                 <ul class="nav menu">
                                     <li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a></li>
                                     <li><a href="map/">Map</a></li>
+                                    {% if username %}
+                                        <li><a href="#">Xin chào : {{ username }}</a></li>
+                                        <li><a href="{% url 'logout' %}">Đăng xuất</a></li>
+                                    {% else %}
+                                        <li><a href="{% url 'login' %}">Đăng nhập</a></li>
+                                    {% endif %}
                                 </ul>
                             </nav>
                         </div>

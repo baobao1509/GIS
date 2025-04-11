@@ -18,8 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import include
 from . import views
+from MAP import views as MAP_views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
+    path('', views.home, name='home'),
     path('map/', include('MAP.urls', namespace='map')),  # Include the URLs from the MAP app
+    path('login/', MAP_views.login_view, name='login'),  # <- thêm dòng này
+    path('logout/', views.logout_view, name='logout'),  # <- thêm dòng này
 ]
