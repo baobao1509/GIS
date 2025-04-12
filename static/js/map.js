@@ -85,52 +85,56 @@ const marketIcon = L.icon({
 
 const shopMarkers = []; // lưu các marker chợ/siêu thị
 let shopsVisible = false;
-
-//Đọc file CSV để thêm vào shoMarkers
-fetch("/static/chuyen_doi_quan_cafe.csv?t=${Date.now()}") // Đảm bảo đường dẫn đúng
-  .then((response) => response.text())
-  .then((csvText) => {
-    let rows = csvText.split("\n").slice(1); // Bỏ dòng tiêu đề
-    rows.forEach((row) => {
-      let cols = row.split(","); // Tách các cột
-      if (cols.length >= 7) {
-        let lat = parseFloat(cols[1]);
-        let lon = parseFloat(cols[2]);
-        let name = cols[3] || "Không rõ";
-        let shopType = cols[4] || "Không xác định";
-        let openingHours = cols[5] || "Không có thông tin";
-        let address = cols[6] || "Chưa được cập nhật";
-
-
-        if (!isNaN(lat) && !isNaN(lon)) {
-          let icon = shopType.toLowerCase().includes("supermarket") ? supermarketIcon : marketIcon;
-        
-          let popupContent = `
-            <b>${name}</b><br>
-            Loại: ${shopType}<br>
-            Giờ mở cửa: ${openingHours}<br>
-            Địa chỉ: ${address}<br>
-            <button onclick="toggleRoute(this, ${lat}, ${lon})" id="btn_duong_di">Xem đường đi</button>
-            <br>
-            <button onclick="goToContribution(${lat}, ${lon}, '${escapeString(name)}', '${escapeString(openingHours)}', '${escapeString(address)}')" style="margin-top:5px;">Đóng góp</button>
-          `;
-        
-          let marker = L.marker([lat, lon], { icon: icon }).bindPopup(popupContent);
-          shopMarkers.push(marker); // không addTo map
-        }        
-      }
-    });
-  })
-  .catch((error) => console.error("Lỗi khi tải CSV:", error));
-
-  function escapeString(str) {
-    return String(str)
-      .replace(/'/g, "\\'")
-      .replace(/"/g, '\\"')
-      .replace(/\n/g, " ")
-      .replace(/\r/g, " ");
-  }
   
+function escapeString(str) {
+  return String(str)
+    .replace(/\\/g, '\\\\')           // Escape backslash
+    .replace(/'/g, "\\'")             // Escape dấu nháy đơn
+    .replace(/"/g, '')             // Escape dấu nháy kép
+    .replace(/\n/g, ' ')              // Thay thế xuống dòng
+    .replace(/\r/g, ' ')              // Thay thế carriage return
+    .replace(/\u2028/g, '\\u2028')    // Escape line separator
+    .replace(/\u2029/g, '\\u2029')    // Escape paragraph separator
+    .replace(/</g, '&lt;')            // Chống XSS
+    .replace(/>/g, '&gt;');           // Chống XSS
+}
+window.addEventListener('DOMContentLoaded', () => {
+  fetch(`/static/chuyen_doi_quan_cafe.csv?t=${Date.now()}`)
+    .then((response) => response.text())
+    .then((csvText) => {
+      let rows = csvText.split("\n").slice(1);
+      rows.forEach((row) => {
+        let cols = row.split(",", 8); // Đảm bảo đủ 8 cột
+        if (cols.length >= 8) {
+          let lat = parseFloat(cols[1]);
+          let lon = parseFloat(cols[2]);
+          let name = cols[3] || "Không rõ";
+          let shopType = cols[4] || "Không xác định";
+          let openingHours = cols[5] || "Không có thông tin";
+          let address = cols[6] || "Chưa được cập nhật";
+          let image = cols[7] || "Chưa được cập nhật";
+          image = image.replace(/\\/g, "/");
+          if (!isNaN(lat) && !isNaN(lon)) {
+            let icon = shopType.toLowerCase().includes("supermarket") ? supermarketIcon : marketIcon;
+            let popupContent =`
+              <b>${name}</b><br>
+              Loại: ${shopType}<br>
+              Giờ mở cửa: ${openingHours}<br>
+              Địa chỉ: ${address}<br>
+              <img src="/${image}" style="width: 200px; height: auto; margin: 5px 0;"><br>
+              <button onclick="toggleRoute(this, ${lat}, ${lon})" id="btn_duong_di">Xem đường đi</button><br>
+              <button onclick="goToContribution(${lat}, ${lon}, '${escapeString(name)}', '${escapeString(openingHours)}', '${escapeString(address)}')" style="margin-top:5px;">Đóng góp</button><br>
+            `;
+            let marker = L.marker([lat, lon], { icon: icon }).bindPopup(popupContent);
+            shopMarkers.push(marker);
+          }
+        }
+      });
+    })
+    .catch((error) => console.error("Lỗi khi tải CSV:", error));
+});
+
+
 const routeBtn = document.getElementById("btn_duong_di");
 
 // Hàm hiển thị/ẩn chợ và siêu thị
@@ -314,12 +318,34 @@ const routeBtn = document.getElementById("btn_duong_di");
     // Hiển thị popup
     nearestMarker.openPopup();
   }
-  
 
-  //Hàm chuyển sang trang đóng góp
+  
   function goToContribution(lat, lng, name, openingHours, address) {
     const url = `/map/dong-gop?lat=${lat}&lng=${lng}&name=${encodeURIComponent(name)}&openingHours=${encodeURIComponent(openingHours)}&address=${encodeURIComponent(address)}`;
     window.location.href = url;
   }
   
+  
+  
+  // Hàm tìm kiếm chợ hoặc siêu thị theo tên
+  function searchMarkerByName() {
+    const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
+    if (!keyword) {
+      alert("Vui lòng nhập tên cần tìm.");
+      return;
+    }
+    let found = false;
+    shopMarkers.forEach(marker => {
+      const popup = marker.getPopup();
+      const content = popup.getContent().toLowerCase();
+      if (content.includes(keyword)) {
+        map.setView(marker.getLatLng(), 17);  // Zoom tới marker
+        marker.openPopup();                   // Mở popup
+        found = true;
+      }
+    });
+    if (!found) {
+      alert("Không tìm thấy chợ hoặc siêu thị nào phù hợp.");
+    }
+  }
   

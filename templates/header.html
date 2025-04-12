@@ -46,8 +46,16 @@
                         <div class="main-menu">
                             <nav class="navigation">
                                 <ul class="nav menu">
-                                    <li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a></li>
-                                    <li><a href="map/">Map</a></li>
+                                    {% if request.path == '/map/' %}
+                                        <li><a href="{% url 'home' %}">HOME</a></li>
+                                    {% else %}
+                                        <li class="active"><a href="{% url 'home' %}">HOME</a></li>
+                                    {% endif %}
+                                    {% if request.path == '/map/' %}
+                                        <li class="active"><a href="/map/">Map</a></li>
+                                    {% else %}
+                                        <li><a href="/map/">Map</a></li>
+                                    {% endif %}
                                     {% if username %}
                                         <li><a href="#">Xin chào : {{ username }}</a></li>
                                         <li><a href="{% url 'logout' %}">Đăng xuất</a></li>

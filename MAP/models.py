@@ -11,4 +11,18 @@ class User(models.Model):
             self.password = make_password(self.password)
         super().save(*args, **kwargs)
     def __str__(self):
-        return self.tai_khoan
+        return self.name
+
+
+class Info(models.Model):
+    lat = models.CharField(max_length=100)
+    lng = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    shop_type = models.CharField(max_length=100)
+    time = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
+    username = models.CharField(max_length=100, null=True, blank=True)
+    userid = models.CharField(max_length=100, null=True, blank=True)
+    image = models.CharField(max_length=300, null=True, blank=True)
+    def __str__(self):
+        return self.name
