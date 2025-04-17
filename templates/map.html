@@ -15,7 +15,8 @@
     <!-- Leaflet Routing Machine -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
     <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
-
+    <!-- Leaflet Fullscreen CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen@2.0.0/Control.FullScreen.css" />
     <style>
         body, html {
             margin: 0;
@@ -30,9 +31,10 @@
     
         #map {
             width: 100%;
-            height: calc(100vh - 60px); /* Trừ đi chiều cao của header */
-            margin-top: 0;
+            height: calc(100vh - 60px); /* Trừ chiều cao header */
+            margin-top: 9%; /* đẩy xuống để tránh bị header che */
         }
+        
     
         .map-button {
             position: absolute;
@@ -56,13 +58,6 @@
             top: 60px;
         }
         /* Gán top riêng biệt cho từng nút */
-        #toggleMarkersBtn {
-            top: 200px;
-        }
-
-        #routeNearestBtn {
-            top: 150px;
-        }
         #searchBox input {
             padding: 4px;
             border: 1px solid #ccc;
@@ -76,6 +71,7 @@
             border-radius: 4px;
             cursor: pointer;
         }
+        
         
     </style>
     
@@ -93,23 +89,24 @@ box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 ">
 <input type="text" id="searchInput" placeholder="Nhập tên chợ hoặc siêu thị..." style="width: 200px;">
 <button onclick="searchMarkerByName()">Tìm kiếm</button>
+
+    <!-- Nút điều khiển -->
+ <!-- Gộp các nút vào cùng đây -->
+    <button id="toggleMarkersBtn" class="map-button" style="position: relative; top: 0; left: 0;" onclick="toggleShopsAndMarkets()">
+        Hiển thị chợ và siêu thị
+    </button>
+
+    <button id="routeNearestBtn" class="map-button" style="position: relative; top: 0; left: 0;" onclick="routeToNearestShop()">
+        Tới địa điểm gần nhất
+    </button>
 </div>
 </div>
 
   
 <div class="container">
-    <!-- Nút điều khiển -->
-    <button id="toggleMarkersBtn" class="map-button" onclick="toggleShopsAndMarkets()">
-        Hiển thị chợ và siêu thị
-    </button>
-
-    <button id="routeNearestBtn" class="map-button" onclick="routeToNearestShop()">
-        Tới địa điểm gần nhất
-    </button>
-
     <!-- Bản đồ -->
     <div id="map"></div>
-
+</div>
     <!-- JavaScript -->
     <script src="{% static 'js/map.js' %}"></script>
     <script>  // Hàm tìm kiếm chợ hoặc siêu thị theo tên
@@ -133,6 +130,8 @@ box-shadow: 0 1px 4px rgba(0,0,0,0.3);
             alert("Không tìm thấy chợ hoặc siêu thị nào phù hợp.");
           }
         }</script>
-</div>
+        <!-- Leaflet Fullscreen JS -->
+    <script src="https://unpkg.com/leaflet.fullscreen@2.0.0/Control.FullScreen.js"></script>
+
 </body>
 </html>

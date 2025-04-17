@@ -128,7 +128,7 @@ id,lat,lon,name,shop_type,thời gian mở cửa,địa chỉ,image
 5352258705,10.7867494,106.6795527,Co.op Food,supermarket,,,
 6315685096,10.7861978,106.6802251,,supermarket,,,
 6315686487,10.7864111,106.6801482,,supermarket,,,
-6370262588,10.7953551,106.6621933,Bách Hoá Xanh,supermarket,Mo-Su 06:30-21:30,,
+17,10.7953551,106.6621933,Bách Hoá Xanh,Market,Mo-Su 06:30-21:30,Chưa được cập nhật,
 4918129153,10.7968933,106.6725047,,supermarket,,,
 6315687799,10.7925143,106.6671054,,supermarket,,,
 6315688492,10.7916367,106.6675247,,supermarket,,,
@@ -219,10 +219,10 @@ id,lat,lon,name,shop_type,thời gian mở cửa,địa chỉ,image
 6319111475,10.8892077,106.5837367,,supermarket,,,
 9593946652,10.8941645,106.5986145,Co.opmart Đỗ Văn Dậy,supermarket,,,
 9593386627,10.8891434,106.6066732,CoopMart Hóc Môn,supermarket,,,
-16,10.877816,106.6399416,CoopMart Hiệp Thành,supermarket,Không có thông tin,Chưa được cập nhật,<class 'NotImplementedError'>
+16,10.877816,106.6399416,CoopMart Hiệp Thành,supermarket,Không có thông tin,Chưa được cập nhật,
 8826976565,10.8881488,106.6145888,Bách Hoá Hạnh Dương,supermarket,24/7,,
 2593670953,10.8419863,106.6436933,Co-opmart Liên Hiệp TP.HCM,supermarket,,,
-13,10.8295261,106.6820675,Co.opmart Phan Văn Trị12345,supermarket,Không có thông tin,1234,static\anh\Screenshot 2025-02-24 101324.png
+13,10.8295261,106.6820675,Co.opmart Phan Văn Trị12345,supermarket,Không có thông tin,1234,
 11527625171,10.8260415,106.689306,Lẩu cá kèo,supermarket,,,
 7211180988,10.8346792,106.6676863,WinMart,supermarket,,,
 11374778363,10.8651908,106.6644966,FamilyMart,supermarket,24/7,,
@@ -257,3 +257,4 @@ id,lat,lon,name,shop_type,thời gian mở cửa,địa chỉ,image
 4960265821,10.849712,106.78289,Siêu thị Co.op Xtra Linh Xuân,supermarket,,,
 11152431366,10.8451011,106.8387009,King Food Mart - S10.02 Vinhomes Grand Park,supermarket,Mo-Su 09:00-21:00,,
 11328890468,10.8451775,106.8387249,HiepDoanShop,supermarket,Mo-Su 09:00-21:00,,
+32,10.803139746453905,106.63870778059032,CirCle K123,supermarket,24/7,Cộng Hòa,static\anh\Screenshot 2025-03-11 140808.png

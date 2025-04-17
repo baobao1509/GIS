@@ -62,7 +62,33 @@
     button:hover {
       background-color: #218838;
     }
+
+    #shopType{
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
   </style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const imageInput = document.querySelector('input[name="image"]');
+    const preview = document.getElementById('old_image');
+
+    imageInput.addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          preview.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  });
+</script>
 </head>
 <body>
   <h2>Đóng góp thông tin cho địa điểm</h2>
@@ -74,13 +100,22 @@
     <label for="name">Tên địa điểm:</label>
     <input type="text" name="name" value="{{ name }}" required>
 
+    
+    <label for="shopType">Phân loại:</label>
+    <select id="shopType" name="shopType">
+      <option value="supermarket" {% if shopType == "supermarket" %}selected{% endif %}>SuperMaket</option>
+      <option value="Market" {% if shopType == "Market" %}selected{% endif %}>Market</option>
+    </select>    
+
     <label for="openingHours">Giờ mở cửa:</label>
     <input type="text" name="openingHours" value="{{ openingHours }}">
 
     <label for="address">Địa chỉ:</label>
     <input type="text" name="address" value="{{ address }}">
 
+    <img  id="old_image" src="/{{image}}" name="old_image" style="max-width: 100%; max-height: 200px; display: block; margin: 10px 0;"/>
     <label for="image">Hình ảnh:</label>
+    <input type="hidden" name="old_image_db" value="{{ image }}">
     <input type="file" name="image" accept="image/*">
 
     <button type="submit">Lưu</button>

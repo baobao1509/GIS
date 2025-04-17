@@ -2,6 +2,10 @@
 let config = {
   minZoom: 7,
   maxZoom: 18,
+  fullscreenControl: true,
+        fullscreenControlOptions: {
+            position: 'topleft'
+        }
 };
 
 // Độ phóng đại khi bản đồ được mở
@@ -116,15 +120,48 @@ window.addEventListener('DOMContentLoaded', () => {
           image = image.replace(/\\/g, "/");
           if (!isNaN(lat) && !isNaN(lon)) {
             let icon = shopType.toLowerCase().includes("supermarket") ? supermarketIcon : marketIcon;
-            let popupContent =`
-              <b>${name}</b><br>
-              Loại: ${shopType}<br>
-              Giờ mở cửa: ${openingHours}<br>
-              Địa chỉ: ${address}<br>
-              <img src="/${image}" style="width: 200px; height: auto; margin: 5px 0;"><br>
-              <button onclick="toggleRoute(this, ${lat}, ${lon})" id="btn_duong_di">Xem đường đi</button><br>
-              <button onclick="goToContribution(${lat}, ${lon}, '${escapeString(name)}', '${escapeString(openingHours)}', '${escapeString(address)}')" style="margin-top:5px;">Đóng góp</button><br>
-            `;
+            let popupContent = `
+            <div style="font-family: Arial, sans-serif; max-width: 250px;">
+              <h3 style="margin: 0 0 8px 0; font-size: 16px; color: #333;">${name}</h3>
+              
+              <p style="margin: 4px 0;"><strong>Loại:</strong> ${shopType}</p>
+              <p style="margin: 4px 0;"><strong>Giờ mở cửa:</strong> ${openingHours}</p>
+              <p style="margin: 4px 0;"><strong>Địa chỉ:</strong> ${address}</p>
+          
+              <img src="/${image}" alt="Hình ảnh" style="width: 100%; height: auto; border-radius: 6px; margin: 10px 0;">
+          
+              <div style="display: flex; flex-direction: column; gap: 6px;">
+                <button 
+                  onclick="toggleRoute(this, ${lat}, ${lon})" 
+                  id="btn_duong_di"
+                  style="
+                    background-color: #007bff;
+                    color: white;
+                    border: none;
+                    padding: 8px 12px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                  "
+                >
+                  Xem đường đi
+                </button>
+          
+                <button 
+                  onclick="goToContribution(${lat}, ${lon}, '${escapeString(name)}', '${escapeString(openingHours)}', '${escapeString(address)}', '${escapeString(shopType)}', '${escapeString(image)}')"
+                  style="
+                    background-color: #28a745;
+                    color: white;
+                    border: none;
+                    padding: 8px 12px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                  "
+                >
+                  Đóng góp
+                </button>
+              </div>
+            </div>
+          `;          
             let marker = L.marker([lat, lon], { icon: icon }).bindPopup(popupContent);
             shopMarkers.push(marker);
           }
@@ -229,6 +266,9 @@ const routeBtn = document.getElementById("btn_duong_di");
         routeWhileDragging: false,
         show: true,
         addWaypoints: false,
+        lineOptions: {
+          styles: [{ color: 'blue', weight: 4, opacity: 0.7 }]
+      },
         createMarker: () => null // Không tạo thêm marker mặc định
       }).addTo(map);
   
@@ -292,6 +332,9 @@ const routeBtn = document.getElementById("btn_duong_di");
       ],
       routeWhileDragging: false,
       addWaypoints: false,
+      lineOptions: {
+        styles: [{ color: 'blue', weight: 4, opacity: 0.7 }]
+    },
       createMarker: () => null
     }).addTo(map);
 
@@ -320,32 +363,30 @@ const routeBtn = document.getElementById("btn_duong_di");
   }
 
   
-  function goToContribution(lat, lng, name, openingHours, address) {
-    const url = `/map/dong-gop?lat=${lat}&lng=${lng}&name=${encodeURIComponent(name)}&openingHours=${encodeURIComponent(openingHours)}&address=${encodeURIComponent(address)}`;
+  function goToContribution(lat, lng, name, openingHours, address,shopType,image) {
+    const url = `/map/dong-gop?lat=${lat}&lng=${lng}&name=${encodeURIComponent(name)}&openingHours=${encodeURIComponent(openingHours)}&address=${encodeURIComponent(address)}&shopType=${encodeURIComponent(shopType)}&image=${encodeURIComponent(image)}`;
     window.location.href = url;
   }
   
   
   
-  // Hàm tìm kiếm chợ hoặc siêu thị theo tên
-  function searchMarkerByName() {
-    const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
-    if (!keyword) {
-      alert("Vui lòng nhập tên cần tìm.");
-      return;
-    }
-    let found = false;
-    shopMarkers.forEach(marker => {
-      const popup = marker.getPopup();
-      const content = popup.getContent().toLowerCase();
-      if (content.includes(keyword)) {
-        map.setView(marker.getLatLng(), 17);  // Zoom tới marker
-        marker.openPopup();                   // Mở popup
-        found = true;
-      }
-    });
-    if (!found) {
-      alert("Không tìm thấy chợ hoặc siêu thị nào phù hợp.");
-    }
-  }
-  
+
+  // Bắt sự kiện click trên bản đồ để lấy tọa độ
+map.on('click', function(e) {
+  const clickedLat = e.latlng.lat;
+  const clickedLng = e.latlng.lng;
+ // Nội dung popup gồm tọa độ và nút dẫn đến trang đóng góp
+ const popupContent = `
+ 📍 Tọa độ:<br>
+ Lat: ${clickedLat.toFixed(6)}<br>
+ Lng: ${clickedLng.toFixed(6)}<br><br>
+   <button  onclick="goToContribution(${clickedLat}, ${clickedLng}, '', '', '', '')" style="padding:5px 10px; background-color:#28a745; color:white; border:none; border-radius:4px; cursor:pointer;">
+     Đóng góp thông tin
+   </button>
+`;
+  // Hiển thị popup tại vị trí được nhấp
+  L.popup()
+    .setLatLng(e.latlng)
+    .setContent(popupContent)
+    .openOn(map);
+});

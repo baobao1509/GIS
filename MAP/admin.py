@@ -7,12 +7,12 @@ import os
 from django.conf import settings
 from django.urls import path
 from django.shortcuts import redirect, get_object_or_404
-
+from django.templatetags.static import static
 admin.site.register(User)
 
 @admin.register(Info)
 class InfoAdmin(admin.ModelAdmin):
-    list_display = ('name', 'lat', 'lng', 'shop_type', 'time', 'address', 'username', 'userid', 'action_buttons')
+    list_display = ('name', 'lat', 'lng', 'shop_type', 'time', 'address', 'username', 'userid','image_tag','action_buttons')
 
     def get_urls(self):
         urls = super().get_urls()
@@ -21,7 +21,17 @@ class InfoAdmin(admin.ModelAdmin):
             path('reject/<int:info_id>/', self.admin_site.admin_view(self.reject_info), name='reject_info'),
         ]
         return custom_urls + urls
-
+    def image_tag(self, obj):
+        if obj.image:
+            # Đảm bảo đường dẫn tĩnh đúng (Django hiểu)
+            image_path = obj.image.replace('\\', '/')  # tránh lỗi khi lưu ảnh từ Windows
+            image_url = static(image_path.replace('static/', ''))  # loại bỏ 'static/' vì static() sẽ thêm lại
+            return format_html(
+                '<img src="{}" width="100" style="object-fit: contain; border: 1px solid #ccc; border-radius: 6px;" />',
+                image_url
+            )
+        return "Không có ảnh"
+    image_tag.short_description = 'Hình ảnh'
     def action_buttons(self, obj):
         return format_html(
             '<a class="button" style="color:lightgreen;" href="{}">✅</a>&nbsp;'
@@ -77,9 +87,11 @@ class InfoAdmin(admin.ModelAdmin):
             writer.writeheader()
             writer.writerows(rows)
 
+        if obj.image != obj.old_image:
+            os.path.isfile(obj.old_image)
+            os.remove(obj.old_image)
         # Xóa bản ghi trong database
         obj.delete()
-
         self.message_user(request, f"✅ Đã {'cập nhật' if updated else 'thêm mới'}: {obj.name}")
         return redirect(request.META.get('HTTP_REFERER', '/admin/'))
 

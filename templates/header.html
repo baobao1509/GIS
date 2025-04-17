@@ -28,7 +28,8 @@
 <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
-
+<!-- Leaflet Fullscreen CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen@2.0.0/Control.FullScreen.css" />
 
 <!-- templates/header.html -->
 <header class="header">
@@ -52,12 +53,12 @@
                                         <li class="active"><a href="{% url 'home' %}">HOME</a></li>
                                     {% endif %}
                                     {% if request.path == '/map/' %}
-                                        <li class="active"><a href="/map/">Map</a></li>
+                                        <li class="active"><a href="/map/">MAP</a></li>
                                     {% else %}
-                                        <li><a href="/map/">Map</a></li>
+                                        <li><a href="/map/">MAP</a></li>
                                     {% endif %}
                                     {% if username %}
-                                        <li><a href="#">Xin chào : {{ username }}</a></li>
+                                        <li><a href="#">Xin chào : {{ name  }}</a></li>
                                         <li><a href="{% url 'logout' %}">Đăng xuất</a></li>
                                     {% else %}
                                         <li><a href="{% url 'login' %}">Đăng nhập</a></li>
@@ -110,5 +111,7 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
         <!-- Bootstrap JS -->
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!-- Leaflet Fullscreen JS -->
+        <script src="https://unpkg.com/leaflet.fullscreen@2.0.0/Control.FullScreen.js"></script>
         <!-- Main JS -->
         <script src="{% static 'js/main.js' %}"></script>

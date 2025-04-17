@@ -52,6 +52,8 @@ def dong_gop_view(request):
         name = request.POST.get("name")
         openingHours = request.POST.get("openingHours")
         address = request.POST.get("address")
+        shopType = request.POST.get("shopType")
+        old_image = request.POST.get("old_image_db")
         user_id = request.session.get('id')
         username = request.session.get('username', 'unknown')
          # 👉 Xử lý ảnh
@@ -64,6 +66,8 @@ def dong_gop_view(request):
             filename = fs.save(uploaded_image.name, uploaded_image)
             # Đường dẫn tương đối để sử dụng trong template (nếu cần)
             image_path = os.path.join('static', 'anh', filename)
+        else:
+            image_path = old_image  # 👈 nếu không có ảnh mới, giữ ảnh cũ
         # 👉 Lưu vào DB hoặc CSV (tùy bạn)
         print(f"Đóng góp: {name} tại ({lat}, {lng})")
         csv_file_path = os.path.join(settings.BASE_DIR, 'static', 'chuyen_doi_quan_cafe.csv')
@@ -84,12 +88,13 @@ def dong_gop_view(request):
                 lat=lat,
                 lng=lng,
                 name=name,
-                shop_type='supermarket',
                 time=openingHours,
                 address=address,
+                shop_type=shopType,
                 username=username,
                 userid=user_id,
-                image=image_path  # cần model Info có field image
+                image=image_path,
+                old_image=old_image
             )
         print("✅ Đã lưu vào database.")
         return redirect('/map/')
@@ -101,7 +106,10 @@ def dong_gop_view(request):
         name = request.GET.get("name")
         openingHours = request.GET.get("openingHours")
         address= request.GET.get("address")
-        return render(request, "dong_gop.html", {"lat": lat, "lng": lng, "name": name, "openingHours": openingHours, "address": address})
+        shopType= request.GET.get("shopType")
+        image= request.GET.get("image")
+        print(image)
+        return render(request, "dong_gop.html", {"lat": lat, "lng": lng, "name": name, "openingHours": openingHours, "address": address, "shopType": shopType, "image": image})
     else:
         return redirect('login')
 
@@ -111,15 +119,18 @@ def register_view(request):
         name = request.POST['name']
         username = request.POST['username']
         phone = request.POST['phone']
-        password = make_password(request.POST['password'])
+        password = request.POST['password']
+        confirm_password = request.POST['confirm_password']
         
         # kiểm tra tài khoản đã tồn tại chưa
         if User.objects.filter(username=username).exists():
-            return render(request, 'register.html', {'error': 'Tài khoản đã tồn tại'})
-        
-        User.objects.create(name=name, username=username, phone=phone, password=password)
-        return redirect('login/')
-    
+            return render(request, 'register.html', {'error': 'Tài khoản đã tồn tại'}) 
+        # Kiểm tra mật khẩu khớp nhau
+        if password != confirm_password:
+            return render(request, 'register.html', {'error': 'Mật khẩu không khớp'})
+        hashed_password = make_password(password)
+        User.objects.create(name=name, username=username, phone=phone, password=hashed_password)
+        return redirect('login')  # Chuyển hướng sang trang đăng nhập
     return render(request, 'register.html')
 
 
@@ -127,7 +138,6 @@ def login_view(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
-
         try:
             user = User.objects.get(username=username)
             if check_password(password, user.password):

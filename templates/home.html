@@ -23,7 +23,28 @@
 		{% include 'preloader.html '%}
 	
         {% include 'header.html' %}
-
+        <main class="main-content" style="padding: 40px 20px;">
+            <section style="position: relative; text-align: center; margin: 40px 0;">
+                <img src="{% static 'images/banner-map.jpg' %}" alt="Bản đồ" style="width: 100%; height: auto; border-radius: 8px;">
+            
+                <a href="/map" style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    padding: 15px 30px;
+                    background-color: #007bff;
+                    color: white;
+                    font-size: 18px;
+                    text-decoration: none;
+                    border-radius: 6px;
+                    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+                ">
+                    Truy cập bản đồ
+                </a>
+            </section>            
+        </main>
+        
         {% include 'footer.html' %}
 
 		
