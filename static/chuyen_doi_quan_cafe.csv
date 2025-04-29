@@ -170,12 +170,12 @@ id,lat,lon,name,shop_type,thời gian mở cửa,địa chỉ,image
 1770597640,10.7737618,106.704673,,supermarket,,,
 2141010789,10.7767779,106.7050958,Siêu Thị Online Annam Gourmet,supermarket,,,
 4875563424,10.7717991,106.7041195,Thi's Market,supermarket,,,
-5743013321,10.7742791,106.6997921,,supermarket,,,
+44,10.7742791,106.6997921,Không rõ,supermarket,Không có thông tin,Chưa được cập nhật,static\anh\Screenshot 2025-03-11 140808.png
 6157860892,10.7731189,106.7007584,Thực Phẩm Hữu Cơ An Toàn - Nam An,supermarket,,,
 10807959905,10.7773144,106.7055429,,supermarket,,,
 6315687817,10.7830575,106.6942504,,supermarket,,,
 6315672844,10.782461,106.7022284,,supermarket,,,
-11533727958,10.7782504,106.7020738,WinMart,supermarket,,,
+42,10.7782504,106.7020738,WinMart,supermarket,Không có thông tin,Chưa được cập nhật,static\anh\Screenshot 2025-03-14 212614.png
 4131363694,10.7858096,106.6944333,Trung Tâm Mua Sắm Sài Gòn Square 3,supermarket,,,
 6315388859,10.7849873,106.6957305,,supermarket,,,
 6315672483,10.7852278,106.6988881,,supermarket,,,
@@ -215,12 +215,12 @@ id,lat,lon,name,shop_type,thời gian mở cửa,địa chỉ,image
 4875563426,10.8252692,106.6303666,Siêu Thị Tiện Lợi Citi Mart,supermarket,,,
 9325963947,10.8304431,106.6216245,Kho Hàng Hùng Hậu,supermarket,24/7,,
 9326078202,10.8303666,106.6215521,Tạp Hoá Chú 8,supermarket,,,
-12707715425,10.8591365,106.6179405,Bách hóa XANH.COM,supermarket,06:30-21:30,,
+41,10.8591365,106.6179405,Bách hóa XANH.COM,supermarket,06:30-21:30,Chưa được cập nhật,static\anh\Screenshot 2025-02-24 101324_uWhvzDr.png
 6319111475,10.8892077,106.5837367,,supermarket,,,
 9593946652,10.8941645,106.5986145,Co.opmart Đỗ Văn Dậy,supermarket,,,
-9593386627,10.8891434,106.6066732,CoopMart Hóc Môn,supermarket,,,
-16,10.877816,106.6399416,CoopMart Hiệp Thành,supermarket,Không có thông tin,Chưa được cập nhật,
-8826976565,10.8881488,106.6145888,Bách Hoá Hạnh Dương,supermarket,24/7,,
+49,10.8891434,106.6066732,CoopMart Hóc Môn,supermarket,Không có thông tin,Chưa được cập nhật,static\anh\Screenshot 2025-03-15 132251.png
+48,10.877816,106.6399416,CoopMart Hiệp Thành,Market,Không có thông tin,Chưa được cập nhật,static\anh\Screenshot 2025-02-24 101324_r2eAGpX.png
+36,10.8881488,106.6145888,Bách Hoá Hạnh Dương,supermarket,24/7,Chưa được cập nhật,static\anh\Screenshot 2025-02-24 101324.png
 2593670953,10.8419863,106.6436933,Co-opmart Liên Hiệp TP.HCM,supermarket,,,
 13,10.8295261,106.6820675,Co.opmart Phan Văn Trị12345,supermarket,Không có thông tin,1234,
 11527625171,10.8260415,106.689306,Lẩu cá kèo,supermarket,,,

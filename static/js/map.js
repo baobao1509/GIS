@@ -49,19 +49,19 @@ const overpassQuery = query;
 
 
 
-// 🏪 Tạo icon cho siêu thị và chợ
+// Tạo icon cho siêu thị và chợ
 const supermarketIcon = L.icon({
-  iconUrl: "/static/leaflet/images/supermarket.png", // Cập nhật đường dẫn ảnh icon
+  iconUrl: "/static/leaflet/images/supermarket.png", 
   iconSize: [32, 32],
   iconAnchor: [16, 32],
-  popupAnchor: [0, -32]
+  popupAnchor: [0, -32] //[0, -32] nghĩa là popup sẽ xuất hiện
 });
 
 const marketIcon = L.icon({
-  iconUrl: "/static/leaflet/imgage/market.png", // Cập nhật đường dẫn ảnh icon
+  iconUrl: "/static/leaflet/images/market.png", 
   iconSize: [32, 32],
   iconAnchor: [16, 32],
-  popupAnchor: [0, -32]
+  popupAnchor: [0, -32] //[0, -32] nghĩa là popup sẽ xuất hiện
 });
 
 
@@ -90,6 +90,14 @@ const marketIcon = L.icon({
 const shopMarkers = []; // lưu các marker chợ/siêu thị
 let shopsVisible = false;
   
+const marketMarkers = [];
+let marketsVisible = false;
+
+const supermarketMarkers = [];
+let supermarketsVisible = false;
+
+
+
 function escapeString(str) {
   return String(str)
     .replace(/\\/g, '\\\\')           // Escape backslash
@@ -102,13 +110,14 @@ function escapeString(str) {
     .replace(/</g, '&lt;')            // Chống XSS
     .replace(/>/g, '&gt;');           // Chống XSS
 }
+
 window.addEventListener('DOMContentLoaded', () => {
   fetch(`/static/chuyen_doi_quan_cafe.csv?t=${Date.now()}`)
-    .then((response) => response.text())
-    .then((csvText) => {
+    .then((response) => response.text())//Khi server trả về file CSV, chuyển nội dung response sang dạng text.
+    .then((csvText) => { // Nhận dữ liệu text (nội dung file CSV) để xử lý tiếp.
       let rows = csvText.split("\n").slice(1);
       rows.forEach((row) => {
-        let cols = row.split(",", 8); // Đảm bảo đủ 8 cột
+        let cols = row.split(",", 8); // Tách mỗi dòng thành mảng các cột, tối đa 8 phần tử (theo format file CSV của bạn).
         if (cols.length >= 8) {
           let lat = parseFloat(cols[1]);
           let lon = parseFloat(cols[2]);
@@ -118,8 +127,17 @@ window.addEventListener('DOMContentLoaded', () => {
           let address = cols[6] || "Chưa được cập nhật";
           let image = cols[7] || "Chưa được cập nhật";
           image = image.replace(/\\/g, "/");
+
           if (!isNaN(lat) && !isNaN(lon)) {
-            let icon = shopType.toLowerCase().includes("supermarket") ? supermarketIcon : marketIcon;
+            let icon, targetArray;
+            if (shopType.toLowerCase().includes("supermarket")) {
+              icon = supermarketIcon;
+              targetArray = supermarketMarkers;
+            } else {
+              icon = marketIcon;
+              targetArray = marketMarkers;
+            }
+
             let popupContent = `
             <div style="font-family: Arial, sans-serif; max-width: 250px;">
               <h3 style="margin: 0 0 8px 0; font-size: 16px; color: #333;">${name}</h3>
@@ -132,7 +150,7 @@ window.addEventListener('DOMContentLoaded', () => {
           
               <div style="display: flex; flex-direction: column; gap: 6px;">
                 <button 
-                  onclick="toggleRoute(this, ${lat}, ${lon})" 
+                  onclick="toggleRoute(this, ${lat}, ${lon})"
                   id="btn_duong_di"
                   style="
                     background-color: #007bff;
@@ -161,9 +179,10 @@ window.addEventListener('DOMContentLoaded', () => {
                 </button>
               </div>
             </div>
-          `;          
+          `;
             let marker = L.marker([lat, lon], { icon: icon }).bindPopup(popupContent);
             shopMarkers.push(marker);
+            targetArray.push(marker);
           }
         }
       });
@@ -172,29 +191,47 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const routeBtn = document.getElementById("btn_duong_di");
 
+const routeBtn = document.getElementById("btn_duong_di");
 // Hàm hiển thị/ẩn chợ và siêu thị
-  function toggleShopsAndMarkets() {
-    const button = document.getElementById("toggleMarkersBtn");
-  
-    if (shopsVisible) {
-      // Ẩn marker
-      shopMarkers.forEach(marker => map.removeLayer(marker));
-      // Xóa đường đi nếu đang có
+function toggleShopsAndMarkets() {
+  const button = document.getElementById("toggleMarkersBtn");
+  if (shopsVisible) {
+    // Ẩn các marker chợ và siêu thị
+    shopMarkers.forEach(marker => map.removeLayer(marker));
+    button.textContent = "Hiển thị chợ và siêu thị";
+    
+    // Đổi nút hiển thị/ẩn chợ và siêu thị
+    const toggleMarketButton = document.getElementById("toggleMarketsBtn");
+    const toggleSupermarketButton = document.getElementById("toggleSupermarketsBtn");
+    
+    toggleMarketButton.textContent = "Hiển thị chợ";
+    toggleSupermarketButton.textContent = "Hiển thị siêu thị";
+
+    // Xóa đường đi nếu có
     if (routeControl) {
       map.removeControl(routeControl);
       routeControl = null;
     }
-      button.textContent = "Hiển thị chợ và siêu thị";
-    } else {
-      // Hiện marker
-      shopMarkers.forEach(marker => marker.addTo(map));
-      button.textContent = "Ẩn chợ và siêu thị";
-    }
-  
-    shopsVisible = !shopsVisible;
+
+  } else {
+    // Hiển thị lại các marker chợ và siêu thị
+    shopMarkers.forEach(marker => marker.addTo(map));
+    button.textContent = "Ẩn chợ và siêu thị";
+
+    // Đổi nút hiển thị/ẩn chợ và siêu thị
+    const toggleMarketButton = document.getElementById("toggleMarketsBtn");
+    const toggleSupermarketButton = document.getElementById("toggleSupermarketsBtn");
+    
+    marketsVisible = !marketsVisible;
+    supermarketsVisible = !supermarketsVisible;
+    toggleMarketButton.textContent = "Ẩn chợ";
+    toggleSupermarketButton.textContent = "Ẩn siêu thị";
   }
+
+  shopsVisible = !shopsVisible;
+}
+
   
 
   
@@ -251,27 +288,24 @@ const routeBtn = document.getElementById("btn_duong_di");
         alert("Chưa xác định được vị trí của bạn.");
         return;
       }
-  
       // Xóa tuyến cũ nếu có
       if (routeControl) {
         map.removeControl(routeControl);
       }
-  
       // Tạo tuyến đường mới
       routeControl = L.Routing.control({
         waypoints: [
           L.latLng(userLocation[0], userLocation[1]),
           L.latLng(destLat, destLng)
         ],
-        routeWhileDragging: false,
-        show: true,
-        addWaypoints: false,
+        routeWhileDragging: false,// Không cho phép kéo tuyến đường bằng chuột.
+        show: true,//Hiển thị tuyến đường khi vừa tạo.
+        addWaypoints: false,// Không cho phép thêm các waypoint trung gian bằng cách click vào tuyến đường.
         lineOptions: {
           styles: [{ color: 'blue', weight: 4, opacity: 0.7 }]
       },
         createMarker: () => null // Không tạo thêm marker mặc định
       }).addTo(map);
-  
       // Đổi tên nút
       button.textContent = "Xóa đường đi";
     } else {
@@ -303,7 +337,6 @@ const routeBtn = document.getElementById("btn_duong_di");
     // Tìm marker gần nhất
     let nearestMarker = null;
     let minDistance = Infinity;
-  
     shopMarkers.forEach(marker => {
       const latlng = marker.getLatLng();
       const distance = map.distance(userLocation, latlng);
@@ -322,8 +355,6 @@ const routeBtn = document.getElementById("btn_duong_di");
     if (routeControl) {
       map.removeControl(routeControl);
     }
-  
-    // Tạo tuyến đường tới địa điểm gần nhất
     // Tạo tuyến đường tới địa điểm gần nhất
     routeControl = L.Routing.control({
       waypoints: [
@@ -340,14 +371,12 @@ const routeBtn = document.getElementById("btn_duong_di");
 
     // LUÔN thêm marker vào bản đồ
     nearestMarker.addTo(map);
-    
     //Đổi button thành xóa đường đi
     nearestMarker.openPopup();
     setTimeout(() => {
       const popup = document.querySelector(".leaflet-popup-content");
       const btn = popup?.querySelector("#btn_duong_di");
       if (btn) {
-        // Bạn có thể thao tác nút này
         btn.textContent = "Xóa đường đi";
         const nearestLatLng = nearestMarker.getLatLng();
         btn.onclick = function () {
@@ -355,9 +384,6 @@ const routeBtn = document.getElementById("btn_duong_di");
         };
       }
     }, 100);
-    
-
-
     // Hiển thị popup
     nearestMarker.openPopup();
   }
@@ -390,3 +416,47 @@ map.on('click', function(e) {
     .setContent(popupContent)
     .openOn(map);
 });
+
+
+
+
+
+
+
+
+
+
+
+function toggleMarkets() {
+  const button = document.getElementById("toggleMarketsBtn");
+  if (marketsVisible) {
+    marketMarkers.forEach(marker => map.removeLayer(marker));
+    button.textContent = "Hiển thị chợ";
+    if (!supermarketsVisible && routeControl) { 
+      map.removeControl(routeControl);
+      routeControl = null;
+    }
+  } else {
+    marketMarkers.forEach(marker => marker.addTo(map));
+    button.textContent = "Ẩn chợ";
+  }
+  marketsVisible = !marketsVisible;
+}
+
+function toggleSupermarkets() {
+  const button = document.getElementById("toggleSupermarketsBtn");
+  if (supermarketsVisible) {
+    supermarketMarkers.forEach(marker => map.removeLayer(marker));
+    button.textContent = "Hiển thị siêu thị";
+    if (!marketsVisible && routeControl) {
+      map.removeControl(routeControl);
+      routeControl = null;
+    }
+  } else {
+    supermarketMarkers.forEach(marker => marker.addTo(map));
+    button.textContent = "Ẩn siêu thị";
+  }
+  supermarketsVisible = !supermarketsVisible;
+}
+
+

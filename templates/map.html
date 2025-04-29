@@ -89,7 +89,18 @@ box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 ">
 <input type="text" id="searchInput" placeholder="Nhập tên chợ hoặc siêu thị..." style="width: 200px;">
 <button onclick="searchMarkerByName()">Tìm kiếm</button>
-
+<div id="searchResults" style="
+  margin-top: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: none;
+  background: white;
+  position: absolute;
+  z-index: 1001;
+  width: 240px;
+"></div>
     <!-- Nút điều khiển -->
  <!-- Gộp các nút vào cùng đây -->
     <button id="toggleMarkersBtn" class="map-button" style="position: relative; top: 0; left: 0;" onclick="toggleShopsAndMarkets()">
@@ -99,6 +110,16 @@ box-shadow: 0 1px 4px rgba(0,0,0,0.3);
     <button id="routeNearestBtn" class="map-button" style="position: relative; top: 0; left: 0;" onclick="routeToNearestShop()">
         Tới địa điểm gần nhất
     </button>
+
+
+    <button id="toggleMarketsBtn" class="map-button" style="position: relative; top: 0; left: 0;" onclick="toggleMarkets()">
+        Hiển thị chợ
+    </button>
+    
+    <button id="toggleSupermarketsBtn" class="map-button" style="position: relative; top: 0; left: 0;" onclick="toggleSupermarkets()">
+        Hiển thị siêu thị
+    </button>
+    
 </div>
 </div>
 
@@ -111,25 +132,61 @@ box-shadow: 0 1px 4px rgba(0,0,0,0.3);
     <script src="{% static 'js/map.js' %}"></script>
     <script>  // Hàm tìm kiếm chợ hoặc siêu thị theo tên
         function searchMarkerByName() {
-          const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
-          if (!keyword) {
-            alert("Vui lòng nhập tên cần tìm.");
-            return;
-          }
-          let found = false;
-          shopMarkers.forEach(marker => {
-            const popup = marker.getPopup();
-            const content = popup.getContent().toLowerCase();
-            if (content.includes(keyword)) {
-              map.setView(marker.getLatLng(), 17);  // Zoom tới marker
-              marker.openPopup();                   // Mở popup
-              found = true;
+            const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
+            const resultsDiv = document.getElementById("searchResults");
+            resultsDiv.innerHTML = ""; // Xóa kết quả cũ
+          
+            if (!keyword) {
+              alert("Vui lòng nhập tên cần tìm.");
+              resultsDiv.style.display = "none";
+              return;
             }
-          });
-          if (!found) {
-            alert("Không tìm thấy chợ hoặc siêu thị nào phù hợp.");
+          
+            let foundMarkers = [];
+          
+            shopMarkers.forEach(marker => {
+              const popup = marker.getPopup();
+              const content = popup.getContent().toLowerCase();
+              if (content.includes(keyword)) {
+                foundMarkers.push(marker);
+              }
+            });
+          
+            if (foundMarkers.length === 0) {
+              resultsDiv.innerHTML = "<div style='padding: 6px;'>Không tìm thấy kết quả phù hợp.</div>";
+              resultsDiv.style.display = "block";
+            } else {
+              foundMarkers.forEach((marker, index) => {
+                const popup = marker.getPopup();
+                // Lấy tiêu đề quán từ popup content
+                const tempDiv = document.createElement("div");
+                tempDiv.innerHTML = popup.getContent();
+                const name = tempDiv.querySelector("h3").textContent;
+          
+                // Tạo item hiển thị kết quả
+                const item = document.createElement("div");
+                item.textContent = `${index + 1}. ${name}`;
+                item.style.padding = "6px";
+                item.style.cursor = "pointer";
+                item.style.borderBottom = "1px solid #eee";
+          
+                item.addEventListener("click", () => {
+                    if (!map.hasLayer(marker)) {
+                      marker.addTo(map);
+                    }
+                    map.setView(marker.getLatLng(), 17);
+                    marker.openPopup();
+                    resultsDiv.style.display = "none";
+                  });
+                  
+          
+                resultsDiv.appendChild(item);
+              });
+          
+              resultsDiv.style.display = "block";
+            }
           }
-        }</script>
+          </script>
         <!-- Leaflet Fullscreen JS -->
     <script src="https://unpkg.com/leaflet.fullscreen@2.0.0/Control.FullScreen.js"></script>
 

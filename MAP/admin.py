@@ -86,10 +86,11 @@ class InfoAdmin(admin.ModelAdmin):
             writer = csv.DictWriter(file, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(rows)
-
-        if obj.image != obj.old_image:
-            os.path.isfile(obj.old_image)
-            os.remove(obj.old_image)
+        if obj.old_image and obj.old_image.strip():
+            if obj.image != obj.old_image:
+                old_image_path = os.path.join(settings.BASE_DIR, obj.old_image.replace('/', os.sep))
+                if os.path.isfile(old_image_path):
+                    os.remove(old_image_path)
         # Xóa bản ghi trong database
         obj.delete()
         self.message_user(request, f"✅ Đã {'cập nhật' if updated else 'thêm mới'}: {obj.name}")
