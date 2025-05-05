@@ -28,3 +28,30 @@ class Info(models.Model):
     type_contribution = models.IntegerField(null=True, blank=True)
     def __str__(self):
         return self.name
+
+class Market(models.Model):
+    name = models.CharField(max_length=255)
+    address = models.TextField()
+    shopType=models.TextField()
+    time=models.TextField()
+    lat = models.FloatField()
+    long = models.FloatField()
+    imageURL = models.TextField()
+    def __str__(self):
+        return self.name
+    
+class Rating(models.Model):
+    market = models.ForeignKey(Market, on_delete=models.CASCADE, related_name='ratings')
+    user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='ratings', null=True)
+    stars = models.PositiveSmallIntegerField()  # từ 1 đến 5
+    comment = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.market.name} - {self.stars}⭐"
+    
+    
+class PasswordResetOTP(models.Model):
+    phone_number = models.CharField(max_length=15)
+    otp = models.CharField(max_length=6)
+    created_at = models.DateTimeField(auto_now_add=True)

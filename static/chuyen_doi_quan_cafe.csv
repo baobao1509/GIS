@@ -6,7 +6,7 @@ id,lat,lon,name,shop_type,thời gian mở cửa,địa chỉ,image
 6021305938,10.6947021,106.6058071,Co.op Food,supermarket,09:00-21:00,,
 6024915705,10.6941007,106.6071452,Siêu Thị Hoàng Quân,supermarket,09:00-21:00,,
 6770632001,10.7064325,106.6231231,Satra Foods,supermarket,,,
-9593386629,10.6738545,106.7359282,CoopMart Nguyễn Bình,supermarket,,,
+69,10.6738545,106.7359282,CoopMart Nguyễn Bình,supermarket,Không có thông tin,Chưa được cập nhật,static\anh\Screenshot 2025-03-15 232339.png
 6727930988,10.7321198,106.6158396,WinMart,supermarket,,,
 12564990769,10.7631261,106.5995005,Túi Giấy Giá Rẻ,supermarket,Mo-Sa 08:00-17:00,,
 6712690785,10.751507,106.6013926,Co.op Food,supermarket,,,
@@ -217,8 +217,8 @@ id,lat,lon,name,shop_type,thời gian mở cửa,địa chỉ,image
 9326078202,10.8303666,106.6215521,Tạp Hoá Chú 8,supermarket,,,
 41,10.8591365,106.6179405,Bách hóa XANH.COM,supermarket,06:30-21:30,Chưa được cập nhật,static\anh\Screenshot 2025-02-24 101324_uWhvzDr.png
 6319111475,10.8892077,106.5837367,,supermarket,,,
-9593946652,10.8941645,106.5986145,Co.opmart Đỗ Văn Dậy,supermarket,,,
-49,10.8891434,106.6066732,CoopMart Hóc Môn,supermarket,Không có thông tin,Chưa được cập nhật,static\anh\Screenshot 2025-03-15 132251.png
+54,10.8941645,106.5986145,Co.opmart Đỗ Văn Dậy,supermarket,Không có thông tin,Chưa được cập nhật,static\anh\Screenshot 2025-03-06 155035.png
+52,10.8891434,106.6066732,CoopMart Hóc Môn,supermarket,,Chưa được cập nhật,static\anh\Screenshot 2025-02-24 101324_8za8cop.png
 48,10.877816,106.6399416,CoopMart Hiệp Thành,Market,Không có thông tin,Chưa được cập nhật,static\anh\Screenshot 2025-02-24 101324_r2eAGpX.png
 36,10.8881488,106.6145888,Bách Hoá Hạnh Dương,supermarket,24/7,Chưa được cập nhật,static\anh\Screenshot 2025-02-24 101324.png
 2593670953,10.8419863,106.6436933,Co-opmart Liên Hiệp TP.HCM,supermarket,,,
@@ -258,3 +258,4 @@ id,lat,lon,name,shop_type,thời gian mở cửa,địa chỉ,image
 11152431366,10.8451011,106.8387009,King Food Mart - S10.02 Vinhomes Grand Park,supermarket,Mo-Su 09:00-21:00,,
 11328890468,10.8451775,106.8387249,HiepDoanShop,supermarket,Mo-Su 09:00-21:00,,
 32,10.803139746453905,106.63870778059032,CirCle K123,supermarket,24/7,Cộng Hòa,static\anh\Screenshot 2025-03-11 140808.png
+55,10.891351458318981,106.61377531637164,Circle K,supermarket,24/7,,static\anh\Screenshot 2025-03-07 133742.png

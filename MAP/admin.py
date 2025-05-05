@@ -8,12 +8,12 @@ from django.conf import settings
 from django.urls import path
 from django.shortcuts import redirect, get_object_or_404
 from django.templatetags.static import static
+from .models import Market  # nhớ import ở đầu file
 admin.site.register(User)
 
 @admin.register(Info)
 class InfoAdmin(admin.ModelAdmin):
     list_display = ('name', 'lat', 'lng', 'shop_type', 'time', 'address', 'username', 'userid','image_tag','action_buttons')
-
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [
@@ -44,6 +44,19 @@ class InfoAdmin(admin.ModelAdmin):
 
     def accept_info(self, request, info_id):
         obj = get_object_or_404(Info, pk=info_id)
+            # Tạo mới hoặc cập nhật vào bảng Market
+        market, created = Market.objects.update_or_create(
+            lat=obj.lat,
+            long=obj.lng,
+            defaults={
+                'name': obj.name,
+                'shopType': obj.shop_type,
+                'time': obj.time,
+                'address': obj.address,
+                'imageURL': obj.image
+            }
+        )
+
         csv_path = os.path.join(settings.BASE_DIR, 'static', 'chuyen_doi_quan_cafe.csv')
         fieldnames = ['id', 'lat', 'lon', 'name', 'shop_type', 'thời gian mở cửa', 'địa chỉ', 'image']
         rows = []
@@ -99,11 +112,23 @@ class InfoAdmin(admin.ModelAdmin):
 
 
     def reject_info(self, request, info_id):
-        obj = get_object_or_404(Info, pk=info_id) # Xóa file ảnh nếu tồn tại
-        if obj.image:
-            image_path = obj.image
+        obj = get_object_or_404(Info, pk=info_id)
+        market = Market.objects.get(lat=obj.lat, long=obj.lng)
+
+        # Chuẩn hóa đường dẫn để đảm bảo so sánh chính xác
+        obj_image_normalized = os.path.normpath(obj.image.strip())  # Đảm bảo obj.image dùng dấu '/'
+        market_image_normalized = os.path.normpath(market.imageURL.strip())  # Đảm bảo market.imageURL dùng dấu '/'
+
+        # In ra để kiểm tra (debug)
+        print("Obj image:", obj_image_normalized)
+        print("Market image:", market_image_normalized)
+
+        # Xóa file ảnh nếu ảnh trong Info không trùng với ảnh trong Market
+        if obj_image_normalized != market_image_normalized:
+            image_path = os.path.join(settings.BASE_DIR, obj_image_normalized)
             if os.path.isfile(image_path):
                 os.remove(image_path)
+
         obj.delete()
         self.message_user(request, f"❌ Đã xóa: {obj.name}")
         return redirect(request.META.get('HTTP_REFERER', '/admin/'))
