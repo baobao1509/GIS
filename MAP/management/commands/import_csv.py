@@ -4,7 +4,6 @@ from ...models import Market
 
 class Command(BaseCommand):
     help = 'Import CSV data into QuanCafe model'
-
     def add_arguments(self, parser):
         parser.add_argument('csv_file', type=str)
     def handle(self, *args, **kwargs):

@@ -11,11 +11,9 @@ let config = {
 
 // Độ phóng đại khi bản đồ được mở
 const zoom = 18;
-
 // Tọa độ Trường
 const lat = 10.796501883372228;
 const lng = 106.66680416611385;
-
 // Khởi tạo bản đồ
 const map = L.map("map", config).setView([lat, lng], zoom);
 map.attributionControl.setPrefix(false);
@@ -120,6 +118,28 @@ function updateStarsUI() {
   `).join('');
 }
 
+function loadRatings(lat, lon) {
+  fetch(`/map/api/rating/list/?lat=${lat}&lon=${lon}`)
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById("ratingList");
+      if (data.length === 0) {
+        container.innerHTML = "<i>Chưa có đánh giá nào.</i>";
+      } else {
+        container.innerHTML = data.map(r => `
+          <div style="border-bottom: 1px solid #ddd; padding: 8px 0;">
+            <div style="font-size: 16px; margin-bottom: 4px;">
+              <strong>${r.stars} ⭐</strong> 
+              <span style="color: #555; font-size: 13px;">(by ${r.user})</span>
+              <span style="color: #999; font-size: 12px; float: right;">${r.created_at}</span>
+            </div>
+            <div style="font-size: 14px; color: #333;">${r.comment || "<i style='color:#888;'>Không có bình luận</i>"}</div>
+          </div>
+        `).join('');
+      }
+    });
+}
+
 function submitDetailedRating() {
   const comment = document.getElementById("ratingComment").value;
   // Kiểm tra đăng nhập trước khi gửi
@@ -144,8 +164,16 @@ function submitDetailedRating() {
   })
     .then(res => res.json())
     .then(data => {
-      alert("Cảm ơn bạn đã đánh giá!");
-      closeRatingModal();
+      alert("Cảm ơn bạn đã đánh giá!"); 
+      loadRatings(selectedLat, selectedLon); // Load lại danh sách đánh giá
+      // Cập nhật lại số sao trung bình trong popup (nếu đang mở popup)
+      const avgRatingElement = document.getElementById(`avg-rating-${selectedLat}-${selectedLon}`);
+      if (avgRatingElement) {
+        avgRatingElement.innerText = data.new_average;
+      }
+      document.getElementById("ratingComment").value = ''; // Reset ô comment
+      selectedStars = 0; 
+      updateStarsUI(); // Reset UI số sao
     })
     .catch(err => console.error("Lỗi gửi đánh giá:", err));
 }
@@ -177,7 +205,7 @@ function escapeString(str) {
   return String(str)
     .replace(/\\/g, '\\\\')           // Escape backslash
     .replace(/'/g, "\\'")             // Escape dấu nháy đơn
-    .replace(/"/g, '')             // Escape dấu nháy kép
+    .replace(/"/g, '')                // Escape dấu nháy kép
     .replace(/\n/g, ' ')              // Thay thế xuống dòng
     .replace(/\r/g, ' ')              // Thay thế carriage return
     .replace(/\u2028/g, '\\u2028')    // Escape line separator

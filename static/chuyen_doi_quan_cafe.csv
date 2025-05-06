@@ -259,3 +259,6 @@ id,lat,lon,name,shop_type,thời gian mở cửa,địa chỉ,image
 11328890468,10.8451775,106.8387249,HiepDoanShop,supermarket,Mo-Su 09:00-21:00,,
 32,10.803139746453905,106.63870778059032,CirCle K123,supermarket,24/7,Cộng Hòa,static\anh\Screenshot 2025-03-11 140808.png
 55,10.891351458318981,106.61377531637164,Circle K,supermarket,24/7,,static\anh\Screenshot 2025-03-07 133742.png
+72,10.879909031988397,106.60980554351113,Bảo Bảo 6,Market,123,456,undefined
+73,10.878227469421917,106.61032084670579,Bảo Bảo 5,supermarket,12322,45633,static\anh\Screenshot 2025-02-24 101324_aFpu3X5.png
+74,10.876862940967886,106.61124485816659,Bảo Bảo 4,supermarket,12322,45633,undefined
