@@ -164,7 +164,7 @@ function submitDetailedRating() {
   })
     .then(res => res.json())
     .then(data => {
-      alert("Cảm ơn bạn đã đánh giá!"); 
+      alert("Cảm ơn bạn đã đánh giá!");
       loadRatings(selectedLat, selectedLon); // Load lại danh sách đánh giá
       // Cập nhật lại số sao trung bình trong popup (nếu đang mở popup)
       const avgRatingElement = document.getElementById(`avg-rating-${selectedLat}-${selectedLon}`);
@@ -172,7 +172,7 @@ function submitDetailedRating() {
         avgRatingElement.innerText = data.new_average;
       }
       document.getElementById("ratingComment").value = ''; // Reset ô comment
-      selectedStars = 0; 
+      selectedStars = 0;
       updateStarsUI(); // Reset UI số sao
     })
     .catch(err => console.error("Lỗi gửi đánh giá:", err));
@@ -245,7 +245,10 @@ window.addEventListener('DOMContentLoaded', () => {
               <p style="margin: 4px 0;"><strong>Loại:</strong> ${shopType}</p>
               <p style="margin: 4px 0;"><strong>Giờ mở cửa:</strong> ${openingHours}</p>
               <p style="margin: 4px 0;"><strong>Địa chỉ:</strong> ${address}</p>
-              <img src="/${image}" alt="Hình ảnh" style="width: 100%; height: auto; border-radius: 6px; margin: 10px 0;">
+                ${image === "Chưa được cập nhật"
+              ? `<p style="margin: 10px 0; color: #888; font-style: italic;">Chưa có hình ảnh</p>`
+              : `<img src="/${image}" alt="Hình ảnh" style="width: 100%; height: auto; border-radius: 6px; margin: 10px 0;">`
+            }
               <div style="margin: 8px 0;">
                 <strong>Đánh giá trung bình:</strong> 
                 <span id="avg-rating-${lat}-${lon}">${avgRating}</span> ⭐
@@ -290,6 +293,8 @@ function toggleShopsAndMarkets() {
     // Đổi nút hiển thị/ẩn chợ và siêu thị
     const toggleMarketButton = document.getElementById("toggleMarketsBtn");
     const toggleSupermarketButton = document.getElementById("toggleSupermarketsBtn");
+    marketsVisible = !marketsVisible;
+    supermarketsVisible = !supermarketsVisible;
     toggleMarketButton.textContent = "Hiển thị chợ";
     toggleSupermarketButton.textContent = "Hiển thị siêu thị";
     // Xóa đường đi nếu có
@@ -303,7 +308,6 @@ function toggleShopsAndMarkets() {
     // Hiển thị lại các marker chợ và siêu thị
     shopMarkers.forEach(marker => marker.addTo(map));
     button.textContent = "Ẩn chợ và siêu thị";
-
     // Đổi nút hiển thị/ẩn chợ và siêu thị
     const toggleMarketButton = document.getElementById("toggleMarketsBtn");
     const toggleSupermarketButton = document.getElementById("toggleSupermarketsBtn");
@@ -366,7 +370,7 @@ map.locate({
 
 
 
-//Hàm xóa đường đi
+//Hàm đường đi
 function toggleRoute(button, destLat, destLng) {
   if (button.textContent === "Xem đường đi") {
     if (!userLocation) {
@@ -514,6 +518,8 @@ map.on('click', function (e) {
 
 function toggleMarkets() {
   const button = document.getElementById("toggleMarketsBtn");
+  const toggleMarkersButton = document.getElementById("toggleMarkersBtn");
+
   if (marketsVisible) {
     marketMarkers.forEach(marker => map.removeLayer(marker));
     button.textContent = "Hiển thị chợ";
@@ -524,12 +530,26 @@ function toggleMarkets() {
   } else {
     marketMarkers.forEach(marker => marker.addTo(map));
     button.textContent = "Ẩn chợ";
+    // Nếu supermarketsVisible đang true thì cập nhật nút tổng
+    if (supermarketsVisible) {
+      toggleMarkersButton.textContent = "Ẩn chợ và siêu thị";
+      shopsVisible = !shopsVisible;
+    }
   }
+
   marketsVisible = !marketsVisible;
+
+  // Nếu cả hai đều đang false thì cập nhật nút tổng
+  if (!marketsVisible && !supermarketsVisible) {
+    toggleMarkersButton.textContent = "Hiển thị chợ và siêu thị";
+    shopsVisible = !shopsVisible;
+  }
 }
 
 function toggleSupermarkets() {
   const button = document.getElementById("toggleSupermarketsBtn");
+  const toggleMarkersButton = document.getElementById("toggleMarkersBtn");
+
   if (supermarketsVisible) {
     supermarketMarkers.forEach(marker => map.removeLayer(marker));
     button.textContent = "Hiển thị siêu thị";
@@ -540,8 +560,75 @@ function toggleSupermarkets() {
   } else {
     supermarketMarkers.forEach(marker => marker.addTo(map));
     button.textContent = "Ẩn siêu thị";
+
+    // Nếu marketsVisible đang true thì cập nhật nút tổng
+    if (marketsVisible) {
+      toggleMarkersButton.textContent = "Ẩn chợ và siêu thị";
+      shopsVisible = !shopsVisible;
+    }
   }
+
   supermarketsVisible = !supermarketsVisible;
+
+  // Nếu cả hai đều đang false thì cập nhật nút tổng
+  if (!marketsVisible && !supermarketsVisible) {
+    toggleMarkersButton.textContent = "Hiển thị chợ và siêu thị";
+    shopsVisible = !shopsVisible;
+  }
 }
 
+function searchMarkerByName() {
+  const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
+  const resultsDiv = document.getElementById("searchResults");
+  resultsDiv.innerHTML = ""; // Xóa kết quả cũ
 
+  if (!keyword) {
+    alert("Vui lòng nhập tên cần tìm.");
+    resultsDiv.style.display = "none";
+    return;
+  }
+
+  let foundMarkers = [];
+
+  shopMarkers.forEach(marker => {
+    const popup = marker.getPopup();
+    const content = popup.getContent().toLowerCase();
+    if (content.includes(keyword)) {
+      foundMarkers.push(marker);
+    }
+  });
+
+  if (foundMarkers.length === 0) {
+    resultsDiv.innerHTML = "<div style='padding: 6px;'>Không tìm thấy kết quả phù hợp.</div>";
+    resultsDiv.style.display = "block";
+  } else {
+    foundMarkers.forEach((marker, index) => {
+      const popup = marker.getPopup();
+      // Lấy tiêu đề quán từ popup content
+      const tempDiv = document.createElement("div");
+      tempDiv.innerHTML = popup.getContent();
+      const name = tempDiv.querySelector("h3").textContent;
+
+      // Tạo item hiển thị kết quả
+      const item = document.createElement("div");
+      item.textContent = `${index + 1}. ${name}`;
+      item.style.padding = "6px";
+      item.style.cursor = "pointer";
+      item.style.borderBottom = "1px solid #eee";
+
+      item.addEventListener("click", () => {
+          if (!map.hasLayer(marker)) {
+            marker.addTo(map);
+          }
+          map.setView(marker.getLatLng(), 17);
+          marker.openPopup();
+          resultsDiv.style.display = "none";
+        });
+        
+
+      resultsDiv.appendChild(item);
+    });
+
+    resultsDiv.style.display = "block";
+  }
+}

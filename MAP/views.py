@@ -185,7 +185,6 @@ class ShopListView(APIView):
         return Response(shop_data, status=status.HTTP_200_OK)
 
 
-@csrf_exempt
 def submit_rating(request):
     if request.method == 'POST':
         data = json.loads(request.body)
